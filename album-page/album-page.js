@@ -19,11 +19,9 @@ const albumInfo = document.getElementsByClassName('album-info')[0]
 const albumMusicList = document.getElementsByClassName('album-music-list')[0]
 
 
-
 window.onload = async () => {
     await fetchData()
 }
-
 
 const fetchData = async () => {
     try {
@@ -31,7 +29,14 @@ const fetchData = async () => {
 
         if (res.ok) {
             data = await res.json()
-            displayData(data)
+
+            if (data.id === undefined) {
+                fetchData()
+            }
+            else {
+                displayData(data)
+            }
+
         }
     } catch (error) {
         console.log(error)
@@ -41,16 +46,14 @@ const fetchData = async () => {
 
 
 
-const displayData = () => {
+const displayData = async () => {
     let counter = 1;
-    console.log(data)
-    console.log(data.cover_small)
     albumImg.innerHTML = `<img src="${data.cover_medium}" alt="">`
     albumName.innerHTML = `<h1>${data.title}</h1>`
     albumInfo.innerHTML = `<img src="${data.artist.picture}" alt="" class="artist-picture mr-2">
     <span>${data.artist.name} • 2003 • ${data.tracks.data.length} • ${convertSec(data.duration, true)}</span>`
 
-    data.tracks.data.map((song) => {
+    await data.tracks.data.map((song) => {
         albumMusicList.innerHTML +=
             `
         <tr class>
