@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "GothamMedium";
+  src: url("../Gotham-Font/GothamMedium.ttf") format("TrueType");
+}
+
+@font-face {
+  font-family: "GothamBook";
+  src: url("../Gotham-Font/GothamBook.ttf") format("TrueType");
+}
+@font-face {
+  font-family: "GothamLight";
+  src: url("../Gotham-Font/GothamLight.ttf") format("TrueType");
+}
+@font-face {
+  font-family: "Gotham-Bold";
+  src: url("../Gotham-Font/Gotham-Bold.otf") format("OpenType");
+}
+
+:root {
+  --font-GothamMedium: GothamMedium, Georgia, Cambria, "Times New Roman", Times,
+    serif;
+
+  --font-GothamBook: GothamBook, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-GothamLight: GothamLight, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  --font-Gotham-Bold: Gotham-Bold, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  --bg-color: #121212;
+  --active-font-color: #f8f8f8;
+  --active-icon-fill: white;
+  --icon-fill: rgb(193, 195, 198);
+  --text-color: rgb(145, 148, 150);
+  --neon-green: #5ff550;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: var(--font-GothamBook);
+  color: var(--text-color);
+  height: 100vh;
+}
+a {
+  color: var(--text-color);
+  transition: all 0.4s linear;
+}
+a:hover {
+  color: var(--active-font-color);
+  text-decoration: none;
+}
+.sidebar {
+  flex: 0 0 20%;
+  height: 100vh;
+  background-color: #000000;
+}
+.navbar {
+  height: 100vh;
+  padding: 1.5rem 1rem 1rem 1.5rem;
+}
+.header-logo {
+  color: var(--active-font-color);
+  font-size: 1.5em;
+  font-family: var(--font-Gotham-Bold);
+}
+.bi::before {
+  font-size: 25px;
+}
+#navbarText {
+  font-family: var(--font-Gotham-Bold);
+}
+.main-content {
+  flex: 0 0 80%;
+}
+.bi-arrow-left-circle-fill {
+  fill: var(--active-font-color);
+}
+.content-jumbotron {
+  background-image: url(../Assets/arijit\ singh.jfif);
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--active-font-color);
+  padding-inline: 32px;
+  padding-bottom: 32px;
+}
+.content-header {
+  height: 8vh;
+}
+.arrow-bg {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.content-heading {
+  height: 98vh;
+}
+h1 {
+  font-family: var(--font-Gotham-Bold);
+  font-size: 6rem;
+}
