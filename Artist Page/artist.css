@@ -35,9 +35,12 @@
 
 body {
   background-color: var(--bg-color);
-  font-family: var(--font-GothamBook);
+  font-family: var(--font-GothamMedium);
   color: var(--text-color);
   height: 100vh;
+}
+hr {
+  background-color: #282828;
 }
 a {
   color: var(--text-color);
@@ -51,6 +54,16 @@ a:hover {
   flex: 0 0 20%;
   height: 100vh;
   background-color: #000000;
+}
+.sidebar-song-list {
+  list-style-type: none;
+  margin-block: 0;
+  padding-inline-start: 0;
+  font-family: var(--font-GothamMedium);
+  font-size: 14px;
+}
+.sidebar-song-list li a {
+  text-transform: capitalize;
 }
 .navbar {
   height: 100vh;
@@ -67,6 +80,9 @@ a:hover {
 #navbarText {
   font-family: var(--font-Gotham-Bold);
 }
+.nav-link {
+  font-size: 0.87rem;
+}
 .main-content {
   flex: 0 0 80%;
 }
@@ -75,7 +91,7 @@ a:hover {
 }
 .content-jumbotron {
   background-image: url(../Assets/arijit\ singh.jfif);
-  height: 50vh;
+  height: 44vh;
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--active-font-color);
@@ -94,4 +110,87 @@ a:hover {
 h1 {
   font-family: var(--font-Gotham-Bold);
   font-size: 6rem;
+}
+/* ------------------------------------------------content-playlist */
+.btn-follow-block {
+  padding-inline: 2em;
+  padding-block: 24px;
+}
+.play-green-btn {
+  background-color: #1fdf64;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin-right: 2em;
+  transition: all 0.1s linear;
+}
+.play-green-btn:hover {
+  transform: scale(1.1);
+}
+.btn-outline-dark {
+  border: 1px solid var(--active-font-color);
+  color: var(--active-font-color);
+  pointer-events: none;
+  font-size: 12px;
+  margin-right: 24px;
+}
+.more-btn {
+  background-color: transparent;
+  border-width: 0;
+}
+.more-btn:hover .more-svg {
+  fill: var(--active-font-color);
+}
+h3 {
+  padding-inline: 32px;
+}
+.player-track-block {
+  padding-inline: 2em;
+}
+.player-track-list {
+  padding-inline: 1em;
+  padding-block: 0.5em;
+}
+.player-track-list:hover {
+  background-color: hsla(0, 0%, 100%, 0.1);
+  border-radius: 4px;
+}
+.heart-hover,
+.more-btn2 {
+  visibility: hidden;
+}
+.player-track-list:hover .heart-hover {
+  visibility: visible;
+}
+.player-track-list:hover .more-btn2 {
+  visibility: visible;
+}
+.artist-small {
+  font-size: 0.87rem;
+}
+.track-title {
+  font-size: 1rem;
+}
+.out-now {
+  background-color: var(--active-font-color);
+  color: #000000;
+  font-size: 0.87rem;
+  border-radius: 20px;
+  padding: 2px 8px 2px 2px;
+}
+.artist-bg-img {
+  border-radius: 50%;
+}
+/* ----------------------------------------------------------------------Player */
+.player {
+  height: 90px;
+  background-color: #181818;
+  border-top: 1px solid #282828;
+  z-index: 2;
+}
+.player-track {
+  font-size: 0.87rem;
+}
+.player-track-artist {
+  font-size: 0.7rem;
 }

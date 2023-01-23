@@ -19,103 +19,300 @@
     <link rel="stylesheet" href="./artist.css" />
   </head>
   <body>
-    <div class="d-flex">
-      <aside class="sidebar">
-        <nav class="navbar d-block">
-          <span class="d-flex align-items-center header-logo mb-4">
-            <img
-              class="mr-2"
-              src="../Assets/spotify.svg"
-              alt="spotify logo"
-              width="38px"
-            />
-            Spotify
-          </span>
-          <div id="navbarText">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a href="#" class="d-flex align-items-center">
-                  <i class="bi bi-house-door mr-3"></i>
-                  <span class="nav-link" href="#"
-                    >Home <span class="sr-only">(current)</span></span
-                  ></a
-                >
-              </li>
-              <li class="nav-item active">
-                <a href="#" class="d-flex align-items-center">
-                  <i class="bi bi-search mr-3"></i>
-                  <span class="nav-link" href="#">Search </span></a
-                >
-              </li>
-              <li class="nav-item active">
-                <a href="#" class="d-flex align-items-center">
-                  <i class="bi bi-collection mr-3"></i>
-                  <span class="nav-link" href="#">Library </span></a
-                >
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </aside>
-      <div class="main-content">
-        <div>
-          <div class="content-jumbotron d-flex flex-column">
-            <div class="d-flex align-items-start content-header">
-              <a href="#" class="arrow-bg">
-                <svg
-                  role="img"
-                  height="16"
-                  width="16"
-                  aria-hidden="true"
-                  class="Svg-sc-ytk21e-0 kcBZLg IYDlXmBmmUKHveMzIPCF"
-                  viewBox="0 0 16 16"
-                  data-encore-id="icon"
-                  fill="#fff"
-                >
-                  <path
-                    d="M11.03.47a.75.75 0 010 1.06L4.56 8l6.47 6.47a.75.75 0 11-1.06 1.06L2.44 8 9.97.47a.75.75 0 011.06 0z"
-                  ></path></svg
-              ></a>
-              <a href="#" class="arrow-bg">
-                <svg
-                  role="img"
-                  height="16"
-                  width="16"
-                  aria-hidden="true"
-                  class="Svg-sc-ytk21e-0 kcBZLg IYDlXmBmmUKHveMzIPCF"
-                  viewBox="0 0 16 16"
-                  data-encore-id="icon"
-                  fill="#fff"
-                >
-                  <path
-                    d="M4.97.47a.75.75 0 000 1.06L11.44 8l-6.47 6.47a.75.75 0 101.06 1.06L13.56 8 6.03.47a.75.75 0 00-1.06 0z"
-                  ></path></svg
-              ></a>
+    <div class="d-flex flex-column">
+      <div class="d-flex">
+        <aside class="sidebar">
+          <nav class="navbar d-block">
+            <span class="d-flex align-items-center header-logo mb-4">
+              <img
+                class="mr-2"
+                src="../Assets/spotify.svg"
+                alt="spotify logo"
+                width="38px"
+              />
+              Spotify
+            </span>
+            <div id="navbarText">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a href="#" class="d-flex align-items-center">
+                    <i class="bi bi-house-door mr-3"></i>
+                    <span class="nav-link" href="#"
+                      >Home <span class="sr-only">(current)</span></span
+                    ></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="d-flex align-items-center">
+                    <i class="bi bi-search mr-3"></i>
+                    <span class="nav-link" href="#">Search </span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="d-flex align-items-center">
+                    <i class="bi bi-collection mr-3"></i>
+                    <span class="nav-link" href="#">Library </span></a
+                  >
+                </li>
+                <li class="nav-item mt-4">
+                  <a href="#" class="d-flex align-items-center">
+                    <i class="bi bi-plus-square mr-3"></i>
+                    <span class="nav-link" href="#">Create Playlist </span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="d-flex align-items-center">
+                    <i class="bi bi-bag-heart-fill mr-3"></i>
+                    <span class="nav-link" href="#">Liked Songs </span></a
+                  >
+                </li>
+              </ul>
+              <hr />
+              <ul class="sidebar-song-list">
+                <li class="mb-1"><a href="#">Jun19</a></li>
+                <li class="mb-1"><a href="#">Funky Heavy Bluesy</a></li>
+                <li class="mb-1"><a href="#">Your Top Songs 2020</a></li>
+                <li class="mb-1"><a href="#">Funky heavy Bluesy</a></li>
+                <li class="mb-1"><a href="#">Funky Heavy Bluesy</a></li>
+              </ul>
             </div>
-            <div class="d-flex flex-column justify-content-end content-heading">
-              <div>
+          </nav>
+        </aside>
+        <div class="main-content">
+          <div>
+            <div class="content-jumbotron d-flex flex-column">
+              <div class="d-flex align-items-start content-header">
+                <a href="#" class="arrow-bg">
+                  <svg
+                    role="img"
+                    height="16"
+                    width="16"
+                    aria-hidden="true"
+                    class="Svg-sc-ytk21e-0 kcBZLg IYDlXmBmmUKHveMzIPCF"
+                    viewBox="0 0 16 16"
+                    data-encore-id="icon"
+                    fill="#fff"
+                  >
+                    <path
+                      d="M11.03.47a.75.75 0 010 1.06L4.56 8l6.47 6.47a.75.75 0 11-1.06 1.06L2.44 8 9.97.47a.75.75 0 011.06 0z"
+                    ></path></svg
+                ></a>
+                <a href="#" class="arrow-bg">
+                  <svg
+                    role="img"
+                    height="16"
+                    width="16"
+                    aria-hidden="true"
+                    class="Svg-sc-ytk21e-0 kcBZLg IYDlXmBmmUKHveMzIPCF"
+                    viewBox="0 0 16 16"
+                    data-encore-id="icon"
+                    fill="#fff"
+                  >
+                    <path
+                      d="M4.97.47a.75.75 0 000 1.06L11.44 8l-6.47 6.47a.75.75 0 101.06 1.06L13.56 8 6.03.47a.75.75 0 00-1.06 0z"
+                    ></path></svg
+                ></a>
+              </div>
+              <div
+                class="d-flex flex-column justify-content-end content-heading"
+              >
+                <div>
+                  <svg
+                    role="img"
+                    height="24"
+                    width="24"
+                    aria-hidden="true"
+                    class="Svg-sc-ytk21e-0 kcjDTG b0NcxAbHvRbqgs2S8QDg mr-1"
+                    viewBox="0 0 24 24"
+                    data-encore-id="icon"
+                    fill="#3D91F4"
+                  >
+                    <path
+                      d="M10.814.5a1.658 1.658 0 012.372 0l2.512 2.572 3.595-.043a1.658 1.658 0 011.678 1.678l-.043 3.595 2.572 2.512c.667.65.667 1.722 0 2.372l-2.572 2.512.043 3.595a1.658 1.658 0 01-1.678 1.678l-3.595-.043-2.512 2.572a1.658 1.658 0 01-2.372 0l-2.512-2.572-3.595.043a1.658 1.658 0 01-1.678-1.678l.043-3.595L.5 13.186a1.658 1.658 0 010-2.372l2.572-2.512-.043-3.595a1.658 1.658 0 011.678-1.678l3.595.043L10.814.5zm6.584 9.12a1 1 0 00-1.414-1.413l-6.011 6.01-1.894-1.893a1 1 0 00-1.414 1.414l3.308 3.308 7.425-7.425z"
+                    ></path>
+                  </svg>
+                  <span>Verified Artist</span>
+                </div>
+                <h1>Arijit Singh</h1>
+                <span>28,472,779 monthly listeners</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="btn-follow-block">
+              <button type="button" title="Play" class="play-green-btn">
                 <svg
                   role="img"
-                  height="24"
-                  width="24"
+                  height="28"
+                  width="28"
                   aria-hidden="true"
-                  class="Svg-sc-ytk21e-0 kcjDTG b0NcxAbHvRbqgs2S8QDg mr-1"
                   viewBox="0 0 24 24"
                   data-encore-id="icon"
-                  fill="#3D91F4"
+                  class="Svg-sc-ytk21e-0 uPxdw"
                 >
                   <path
-                    d="M10.814.5a1.658 1.658 0 012.372 0l2.512 2.572 3.595-.043a1.658 1.658 0 011.678 1.678l-.043 3.595 2.572 2.512c.667.65.667 1.722 0 2.372l-2.572 2.512.043 3.595a1.658 1.658 0 01-1.678 1.678l-3.595-.043-2.512 2.572a1.658 1.658 0 01-2.372 0l-2.512-2.572-3.595.043a1.658 1.658 0 01-1.678-1.678l.043-3.595L.5 13.186a1.658 1.658 0 010-2.372l2.572-2.512-.043-3.595a1.658 1.658 0 011.678-1.678l3.595.043L10.814.5zm6.584 9.12a1 1 0 00-1.414-1.413l-6.011 6.01-1.894-1.893a1 1 0 00-1.414 1.414l3.308 3.308 7.425-7.425z"
+                    d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"
                   ></path>
                 </svg>
-                <span>Verified Artist</span>
+              </button>
+              <button type="button" class="btn btn-outline-dark text-uppercase">
+                Following
+              </button>
+              <button
+                type="button"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="More options for Arijit Singh"
+                class="more-btn px-0"
+              >
+                <svg
+                  role="img"
+                  height="32"
+                  width="32"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  data-encore-id="icon"
+                  class="more-svg"
+                  fill="rgb(145, 148, 150)"
+                >
+                  <path
+                    d="M4.5 13.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm15 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm-7.5 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div class="d-flex">
+              <div class="col-8 px-0">
+                <h3 class="text-white">Popular</h3>
+                <div class="player-track-block">
+                  <div class="player-track-list">
+                    <div class="row align-items-center">
+                      <div class="col-6">
+                        <div class="d-flex align-items-center">
+                          <span>1</span>
+
+                          <img
+                            src="../Assets/artist-track-1.jfif"
+                            alt="song-poster"
+                            width="40px"
+                            class="mx-3"
+                          />
+                          <h6 class="mb-0 text-white track-title">Bekhyali</h6>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <small class="artist-small">Arijit Singh</small>
+                      </div>
+                      <div class="col-3">
+                        <div
+                          class="d-flex align-items-center justify-content-end"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-heart mr-3 heart-hover"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
+                            />
+                          </svg>
+
+                          <span class="artist-small mx-3">6:10</span>
+                          <button
+                            type="button"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="More options for Arijit Singh"
+                            class="more-btn more-btn2 px-0"
+                          >
+                            <svg
+                              role="img"
+                              height="24"
+                              width="24"
+                              aria-hidden="true"
+                              viewBox="0 0 24 24"
+                              data-encore-id="icon"
+                              class="more-svg"
+                              fill="rgb(145, 148, 150)"
+                            >
+                              <path
+                                d="M4.5 13.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm15 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm-7.5 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                              ></path>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h1>Arijit Singh</h1>
-              <span>28,472,779 monthly listeners</span>
+              <div class="col-4 px-0">
+                <h3 class="text-white px-0">Artist pick</h3>
+                <div class="d-flex">
+                  <img
+                    src="../Assets/artist-pick.jfif"
+                    alt="artist-poster"
+                    width="76px"
+                    class="mr-3"
+                  />
+                  <div class="d-flex flex-column">
+                    <div class="d-flex out-now">
+                      <img
+                        src="../Assets/ed-sheeran.jfif"
+                        alt="artist-pic"
+                        width="24px"
+                        class="artist-bg-img mr-2"
+                      />
+                      <span>F64 for SBTV | Out Now</span>
+                    </div>
+                    <span class="d-block text-white">F64</span>
+                    <small>Single</small>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div></div>
+      </div>
+      <div class="player fixed-bottom px-3 w-100 d-flex align-items-center">
+        <div class="player-box-1 d-flex align-items-center">
+          <img src="../Assets/player-img.jfif" alt="Ae Ajnabi" width="56px" />
+          <div class="ml-3">
+            <div class="text-truncate text-white player-track">Ae Ajnabi</div>
+            <div class="player-track-artist text-truncate">Udit Narayan</div>
+          </div>
+          <div class="player-track-like">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-heart"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
+              />
+            </svg>
+            <svg
+              class="d-none"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-heart-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+              />
+            </svg>
+          </div>
+        </div>
       </div>
     </div>
 
