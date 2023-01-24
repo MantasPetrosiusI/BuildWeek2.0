@@ -45,7 +45,9 @@ body {
 hr {
   background-color: #282828;
 }
-
+.padding-bottom {
+  padding-bottom: 7em;
+}
 a {
   color: var(--text-color);
   transition: all 0.4s linear;
@@ -55,7 +57,11 @@ a:hover {
   color: var(--active-font-color);
   text-decoration: none;
 }
-
+.button-transparent {
+  background-color: transparent;
+  border: none;
+  color: var(--text-color);
+}
 .sidebar {
   flex: 0 0 20%;
   height: 100vh;
@@ -108,17 +114,27 @@ a:hover {
 }
 
 .content-jumbotron {
-  background-image: url(../Assets/arijit\ singh.jfif);
+  /* background-image: url(../Assets/arijit\ singh.jfif); */
   height: 44vh;
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background-repeat: no-repeat;
+  background-size: cover; */
   color: var(--active-font-color);
-  padding-inline: 32px;
-  padding-bottom: 32px;
+  position: relative;
+}
+.artist-big-img {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  height: 100%;
+  z-index: -1;
 }
 
 .content-header {
   height: 8vh;
+  margin-inline: 32px;
 }
 
 .arrow-bg {
@@ -127,6 +143,8 @@ a:hover {
 
 .content-heading {
   height: 98vh;
+  padding-inline: 32px;
+  padding-bottom: 32px;
 }
 
 h1 {
@@ -254,6 +272,18 @@ h3 {
 
 .player-track-artist {
   font-size: 0.7rem;
+}
+.music-play-btn {
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+}
+.audio-time {
+  font-size: 12px;
+}
+.player-progress-bar {
+  height: 3px;
+  background-color: #c3c3c4;
 }
 
 @media screen and (min-width: 768px) {
