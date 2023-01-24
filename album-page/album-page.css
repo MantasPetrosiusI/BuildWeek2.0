@@ -1,5 +1,6 @@
 .container-fluid {
     color: white;
+    font-family: Helvetica Neue, helvetica, arial, Hiragino Kaku Gothic Pro, Meiryo, MS Gothic;
 }
 
 
@@ -31,9 +32,19 @@ td:nth-last-child(1) {
 }
 
 i {
-    font-size: 40px;
+    font-size: 30px;
+}
+
+.bi-play-circle-fill {
+    color: rgb(30 215 96);
+    font-size: 50px;
 }
 
 .stopwatchIcon {
     font-size: 20px;
+}
+
+.time-span {
+    color: rgba(255, 255, 255, 0.5);
+
 }

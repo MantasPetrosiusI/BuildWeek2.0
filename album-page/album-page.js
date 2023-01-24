@@ -29,13 +29,14 @@ const fetchData = async () => {
 
         if (res.ok) {
             data = await res.json()
-
+            console.log(data);
             if (data.id === undefined) {
                 fetchData()
             }
             else {
                 displayData(data)
             }
+
         }
     } catch (error) {
         console.log(error)
@@ -47,7 +48,7 @@ const displayData = async () => {
     albumImg.innerHTML = `<img src="${data.cover_medium}" alt="">`
     albumName.innerHTML = `<h1>${data.title}</h1>`
     albumInfo.innerHTML = `<img src="${data.artist.picture}" alt="" class="artist-picture mr-2">
-    <span>${data.artist.name} • 2003 • ${data.tracks.data.length} • ${convertSec(data.duration, true)}</span>`
+    <span><a href="../Artist Page/artist.html?id=${albumID}">${data.artist.name}<a/> • 2003 • ${data.tracks.data.length} songs, <span class="time-span">${convertSec(data.duration, true)}<span></span>`
 
     await data.tracks.data.map((song) => {
         albumMusicList.innerHTML +=
@@ -56,15 +57,13 @@ const displayData = async () => {
             <th scope="row">${counter}</th>
                 <td>
                     <div class="row m-0">${song.title}</div>
-                    <div class="row m-0">${song.artist.name}</div>
+                    <div class="row m-0"><a href="../Artist Page/artist.html?id=${albumID}">${song.artist.name}</a></div>
                 </td>
             <td class="ml-auto">${convertSec(song.duration)}</td>
         </tr>
         `
         counter++;
     })
-
-
 }
 
 
