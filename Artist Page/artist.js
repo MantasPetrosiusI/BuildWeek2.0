@@ -24,7 +24,7 @@ const getArtist = async (id) => {
     const response = await fetch(url + id, options);
     const artistArray = await response.json();
     console.log("artistArray", artistArray);
-    changeElement(".artist-big-img", "src", artistArray.picture_big);
+    changeElement(".artist-big-img", "src", artistArray.picture_xl);
     changeElement("h1", "innerText", artistArray.name);
     changeElement(
       ".fan",
@@ -112,8 +112,8 @@ const renderFetchedSongs = async (trackDataArray) => {
             </svg>
   
             <span class="artist-small mx-3">${(
-          singleSong.duration / 60
-        ).toFixed(2)}</span>
+              singleSong.duration / 60
+            ).toFixed(2)}</span>
             <button
               type="button"
               data-toggle="tooltip"
