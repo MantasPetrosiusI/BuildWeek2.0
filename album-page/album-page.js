@@ -6,12 +6,9 @@ const options = {
     }
 };
 
-/* 
 const params = new URLSearchParams(location.search)
-const albumID = params.get("id") 
-*/
-let data = {};
-const albumID = 162037
+const albumID = params.get("id")
+
 const url = `https://deezerdevs-deezer.p.rapidapi.com/album/${albumID}`
 const albumImg = document.getElementsByClassName('album-img')[0]
 const albumName = document.getElementsByClassName('album-name')[0]
