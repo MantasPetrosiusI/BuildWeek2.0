@@ -26,7 +26,9 @@ const fetchData = async () => {
         let res = await fetch(url, options)
 
         if (res.ok) {
+
             data = await res.json()
+            console.log(data)
             displayData()
         }
     } catch (error) {
@@ -39,7 +41,7 @@ const displayData = async () => {
     albumImg.innerHTML = `<img src="${data.cover_medium}" alt="">`
     albumName.innerHTML = `<h1>${data.title}</h1>`
     albumInfo.innerHTML = `<img src="${data.artist.picture}" alt="" class="artist-picture mr-2">
-    <span><a href="../Artist Page/artist.html?id=${albumID}">${data.artist.name}<a/> • 2003 • ${data.tracks.data.length} songs, <span class="time-span">${convertSec(data.duration, true)}<span></span>`
+    <span><a href="../Artist Page/artist.html?id=${data.artist.id}">${data.artist.name}<a/> • 2003 • ${data.tracks.data.length} songs, <span class="time-span">${convertSec(data.duration, true)}<span></span>`
 
     await data.tracks.data.map((song) => {
         albumMusicList.innerHTML +=
@@ -48,7 +50,7 @@ const displayData = async () => {
             <th scope="row" class="align-middle track-number">${counter}</th>
                 <td>
                     <div class="row m-0">${song.title}</div>
-                    <div class="row m-0"><a href="../Artist Page/artist.html?id=${albumID}" class="track-list">${song.artist.name}</a></div>
+                    <div class="row m-0"><a href="../Artist Page/artist.html?id=${data.artist.id}" class="track-list">${song.artist.name}</a></div>
                 </td>
             <td class="ml-auto align-middle">${convertSec(song.duration)}</td>
         </tr>
