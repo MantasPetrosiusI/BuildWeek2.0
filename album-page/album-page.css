@@ -1,0 +1,50 @@
+.container-fluid {
+    color: white;
+    font-family: Helvetica Neue, helvetica, arial, Hiragino Kaku Gothic Pro, Meiryo, MS Gothic;
+}
+
+
+.side-navbar {
+    flex: 0 0 241px;
+    background-color: black;
+}
+
+
+
+.header-part {
+    background-color: rgb(52 58 64);
+}
+
+.artist-picture {
+    width: 30px;
+    border-radius: 30px;
+}
+
+th:last-child,
+td:last-child,
+th:nth-last-child(1),
+td:nth-last-child(1) {
+    text-align: right;
+}
+
+.album-img {
+    max-width: 300px;
+}
+
+i {
+    font-size: 30px;
+}
+
+.bi-play-circle-fill {
+    color: rgb(30 215 96);
+    font-size: 50px;
+}
+
+.stopwatchIcon {
+    font-size: 20px;
+}
+
+.time-span {
+    color: rgba(255, 255, 255, 0.5);
+
+}
