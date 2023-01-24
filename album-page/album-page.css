@@ -1,0 +1,39 @@
+.container-fluid {
+    color: white;
+}
+
+
+.side-navbar {
+    flex: 0 0 241px;
+    background-color: black;
+}
+
+
+
+.header-part {
+    background-color: rgb(52 58 64);
+}
+
+.artist-picture {
+    width: 30px;
+    border-radius: 30px;
+}
+
+th:last-child,
+td:last-child,
+th:nth-last-child(1),
+td:nth-last-child(1) {
+    text-align: right;
+}
+
+.album-img {
+    max-width: 300px;
+}
+
+i {
+    font-size: 40px;
+}
+
+.stopwatchIcon {
+    font-size: 20px;
+}
