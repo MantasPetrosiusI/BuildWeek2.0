@@ -55,7 +55,6 @@ const loadAlbums = async () => {
       const response = await fetch(url + artistArray[i], options);
 
       const albums = await response.json();
-      console.log("albums ", albums);
       const { data } = albums;
       const displayAlbums = data.slice(0, 1);
       displayAlbums.forEach((album) => {
@@ -81,7 +80,6 @@ const loadQueen = async (value) => {
     const response = await fetch(url + value, options);
 
     const songs = await response.json();
-    console.log(songs);
     const { data } = songs;
     const displaySongs = data.slice(0, 6);
     displaySongs.forEach((song) => {
