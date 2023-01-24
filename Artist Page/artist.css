@@ -7,10 +7,12 @@
   font-family: "GothamBook";
   src: url("../Gotham-Font/GothamBook.ttf") format("TrueType");
 }
+
 @font-face {
   font-family: "GothamLight";
   src: url("../Gotham-Font/GothamLight.ttf") format("TrueType");
 }
+
 @font-face {
   font-family: "Gotham-Bold";
   src: url("../Gotham-Font/Gotham-Bold.otf") format("OpenType");
@@ -39,17 +41,21 @@ body {
   color: var(--text-color);
   height: 100vh;
 }
+
 hr {
   background-color: #282828;
 }
+
 a {
   color: var(--text-color);
   transition: all 0.4s linear;
 }
+
 a:hover {
   color: var(--active-font-color);
   text-decoration: none;
 }
+
 .sidebar {
   flex: 0 0 20%;
   height: 100vh;
@@ -57,6 +63,7 @@ a:hover {
   position: sticky;
   top: 0;
 }
+
 .sidebar-song-list {
   list-style-type: none;
   margin-block: 0;
@@ -64,33 +71,42 @@ a:hover {
   font-family: var(--font-GothamMedium);
   font-size: 14px;
 }
+
 .sidebar-song-list li a {
   text-transform: capitalize;
 }
+
 .navbar {
   height: 100vh;
   padding: 1.5rem 1rem 1rem 1.5rem;
 }
+
 .header-logo {
   color: var(--active-font-color);
   font-size: 1.5em;
   font-family: var(--font-Gotham-Bold);
 }
+
 .bi::before {
   font-size: 25px;
 }
+
 #navbarText {
   font-family: var(--font-Gotham-Bold);
 }
+
 .nav-link {
   font-size: 0.87rem;
 }
+
 .main-content {
   flex: 0 0 80%;
 }
+
 .bi-arrow-left-circle-fill {
   fill: var(--active-font-color);
 }
+
 .content-jumbotron {
   background-image: url(../Assets/arijit\ singh.jfif);
   height: 44vh;
@@ -100,24 +116,30 @@ a:hover {
   padding-inline: 32px;
   padding-bottom: 32px;
 }
+
 .content-header {
   height: 8vh;
 }
+
 .arrow-bg {
   background-color: rgba(0, 0, 0, 0.7);
 }
+
 .content-heading {
   height: 98vh;
 }
+
 h1 {
   font-family: var(--font-Gotham-Bold);
   font-size: 6rem;
 }
+
 /* ------------------------------------------------content-playlist */
 .btn-follow-block {
   padding-inline: 2em;
   padding-block: 24px;
 }
+
 .play-green-btn {
   background-color: #1fdf64;
   width: 56px;
@@ -126,9 +148,11 @@ h1 {
   margin-right: 2em;
   transition: all 0.1s linear;
 }
+
 .play-green-btn:hover {
   transform: scale(1.1);
 }
+
 .btn-outline-dark {
   border: 1px solid var(--text-color);
   color: var(--active-font-color);
@@ -136,58 +160,74 @@ h1 {
   font-size: 12px;
   margin-right: 24px;
 }
+
 .btn-outline-dark:hover {
   border: 1px solid var(--active-font-color);
 }
+
 .more-btn {
   background-color: transparent;
   border-width: 0;
 }
+
 .more-btn:hover .more-svg {
   fill: var(--active-font-color);
 }
+
 h3 {
   padding-inline: 32px;
 }
+
 .player-track-block {
   padding-inline: 2em;
 }
+
 .player-track-list {
   padding-inline: 1em;
   padding-block: 0.5em;
   position: relative;
 }
+
 .player-track-list:hover {
   background-color: hsla(0, 0%, 100%, 0.1);
   border-radius: 4px;
 }
+
 .play-icon {
   position: absolute;
   left: 10px;
 }
+
 .heart-hover,
 .more-btn2,
 .play-icon {
   visibility: hidden;
 }
+
 .player-track-list:hover .heart-hover {
   visibility: visible;
 }
+
 .player-track-list:hover .more-btn2 {
   visibility: visible;
 }
+
 .player-track-list:hover .play-icon {
   visibility: visible;
 }
+
 .player-track-list:hover .track-num {
   visibility: hidden;
 }
+
 .artist-small {
   font-size: 0.87rem;
 }
+
 .track-title {
   font-size: 1rem;
 }
+
 .out-now {
   background-color: var(--active-font-color);
   color: #000000;
@@ -195,9 +235,11 @@ h3 {
   border-radius: 20px;
   padding: 2px 8px 2px 2px;
 }
+
 .artist-bg-img {
   border-radius: 50%;
 }
+
 /* ----------------------------------------------------------------------Player */
 .player {
   height: 90px;
@@ -205,9 +247,11 @@ h3 {
   border-top: 1px solid #282828;
   z-index: 2;
 }
+
 .player-track {
   font-size: 0.87rem;
 }
+
 .player-track-artist {
   font-size: 0.7rem;
 }
@@ -218,6 +262,7 @@ h3 {
     /* margin-top: 10px; */
   }
 }
+
 @media screen and (min-width: 576px) {
   .medium-screen-p {
     padding-left: 32px;
@@ -225,6 +270,7 @@ h3 {
     /* margin-top: 10px; */
   }
 }
+
 @media screen and (max-width: 576px) {
   .medium-screen-p {
     padding-left: 32px;

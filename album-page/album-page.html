@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Artist Page/artist.css">
     <link rel="stylesheet" href="album-page.css">
     <title>Document</title>
 </head>
@@ -16,6 +17,57 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col side-navbar">
+
+                <aside class="sidebar">
+                    <nav class="navbar d-block">
+                        <span class="d-flex align-items-center header-logo mb-4">
+                            <img class="mr-2" src="../Assets/spotify.svg" alt="spotify logo" width="38px" />
+                            Spotify
+                        </span>
+                        <div id="navbarText">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a href="#" class="d-flex align-items-center">
+                                        <i class="bi bi-house-door mr-3"></i>
+                                        <span class="nav-link" href="#">Home <span
+                                                class="sr-only">(current)</span></span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="d-flex align-items-center">
+                                        <i class="bi bi-search mr-3"></i>
+                                        <span class="nav-link" href="#">Search </span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="d-flex align-items-center">
+                                        <i class="bi bi-collection mr-3"></i>
+                                        <span class="nav-link" href="#">Library </span></a>
+                                </li>
+                                <li class="nav-item mt-4">
+                                    <a href="#" class="d-flex align-items-center">
+                                        <i class="bi bi-plus-square mr-3"></i>
+                                        <span class="nav-link" href="#">Create Playlist </span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="d-flex align-items-center">
+                                        <i class="bi bi-bag-heart-fill mr-3"></i>
+                                        <span class="nav-link" href="#">Liked Songs </span></a>
+                                </li>
+                            </ul>
+                            <hr />
+                            <ul class="sidebar-song-list">
+                                <li class="mb-1"><a href="#">Jun19</a></li>
+                                <li class="mb-1"><a href="#">Funky Heavy Bluesy</a></li>
+                                <li class="mb-1"><a href="#">Your Top Songs 2020</a></li>
+                                <li class="mb-1"><a href="#">Funky heavy Bluesy</a></li>
+                                <li class="mb-1"><a href="#">Funky Heavy Bluesy</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </aside>
+
+
+
+
             </div>
             <div class="col pt-5 header-part">
                 <div class="row">
@@ -40,12 +92,12 @@
                     </div>
                 </div>
                 <div class="row">
-                    <table class="table table-hover table-dark mt-5 mr-5">
+                    <table class="table table-hover table-borderless mt-5 mr-5 ml-3">
                         <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">TITLE</th>
-                                <th scope="col"><i class="bi bi-stopwatch stopwatchIcon"></i></th>
+                            <tr class="header-tr">
+                                <th scope="col" class="align-middle">#</th>
+                                <th scope="col" class="align-middle">TITLE</th>
+                                <th scope="col" class="align-middle"><i class="bi bi-stopwatch stopwatchIcon"></i></th>
                             </tr>
                         </thead>
                         <tbody class="album-music-list">

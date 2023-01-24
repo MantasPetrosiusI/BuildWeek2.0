@@ -54,19 +54,20 @@ const displayData = async () => {
         albumMusicList.innerHTML +=
             `
         <tr class>
-            <th scope="row">${counter}</th>
+            <th scope="row" class="align-middle track-number">${counter}</th>
                 <td>
                     <div class="row m-0">${song.title}</div>
-                    <div class="row m-0"><a href="../Artist Page/artist.html?id=${albumID}">${song.artist.name}</a></div>
+                    <div class="row m-0"><a href="../Artist Page/artist.html?id=${albumID}" class="track-list">${song.artist.name}</a></div>
                 </td>
-            <td class="ml-auto">${convertSec(song.duration)}</td>
+            <td class="ml-auto align-middle">${convertSec(song.duration)}</td>
         </tr>
         `
         counter++;
     })
 }
 
-
+//const addEventListeners 0
+//history.back
 
 
 const convertSec = (sec, song = false) => {
