@@ -36,15 +36,11 @@ const fetchData = async () => {
             else {
                 displayData(data)
             }
-
         }
     } catch (error) {
         console.log(error)
     }
 }
-
-
-
 
 const displayData = async () => {
     let counter = 1;
