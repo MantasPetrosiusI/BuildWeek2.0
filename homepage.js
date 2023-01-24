@@ -23,7 +23,7 @@ const loadArtist = async (query) => {
       if (artists[0] === song) {
         popularAlbums.innerHTML += `<div class="carousel-item active"><div class="col col-2">
             <div class="card">
-            <a href="./album-page/album-page.html?albumId=${song.album.id}"><img src="${song.album.cover_medium}" class="card-img-top" alt="..." ></a>
+            <a href="./album-page/album-page.html?id=${song.album.id}"><img src="${song.album.cover_medium}" class="card-img-top" alt="..." ></a>
             <div class="card-body">
             <span>${song.album.title}</span></a>
                 <span id="spotifyPlay"><i class="bi bi-play-circle-fill" style="font-size: 45px; color: #1fdf64"></i></span>
@@ -34,7 +34,7 @@ const loadArtist = async (query) => {
       } else {
         popularAlbums.innerHTML += `<div class="carousel-item"><div class="col col-2">
             <div class="card">
-            <a href="./album-page/album-page.html?albumId=${song.album.id}"><img src="${song.album.cover_medium}" class="card-img-top" alt="..." ></a>
+            <a href="./album-page/album-page.html?id=${song.album.id}"><img src="${song.album.cover_medium}" class="card-img-top" alt="..." ></a>
             <div class="card-body">
             <span>${song.album.title}</span></a>
                 <span id="spotifyPlay"><i class="bi bi-play-circle-fill" style="font-size: 45px; color: #1fdf64"></i></span>
@@ -61,7 +61,7 @@ const loadAlbums = async () => {
         const popularAlbums = document.getElementById("recentlyPlayed");
         popularAlbums.innerHTML += `<div class="col col-2">
 <div class="card">
-  <a href="./album-page/album-page.html?albumId=${album.album.id}"><img src="${album.album.cover_medium}" class="card-img-top" alt="..." ></a>
+  <a href="./album-page/album-page.html?id=${album.album.id}"><img src="${album.album.cover_medium}" class="card-img-top" alt="..." ></a>
   <div class="card-body">
   <span>${album.album.title}</span></a>
     <span id="spotifyPlay"><i class="bi bi-play-circle-fill" style="font-size: 45px; color: #1fdf64"></i></span>
@@ -86,7 +86,7 @@ const loadQueen = async (value) => {
       const popularAlbums = document.getElementById("showsToTry");
       popularAlbums.innerHTML += `<div class="col col-2">
 <div class="card">
-  <a href="./album-page/album-page.html?albumId=${song.album.id}"><img src="${song.album.cover_medium}" class="card-img-top" alt="..." ></a>
+  <a href="./album-page/album-page.html?id=${song.album.id}"><img src="${song.album.cover_medium}" class="card-img-top" alt="..." ></a>
   <div class="card-body">
   <span>${song.album.title}</span></a>
     <span id="spotifyPlay"><i class="bi bi-play-circle-fill" style="font-size: 45px; color: #1fdf64"></i></span>

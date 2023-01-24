@@ -1,8 +1,8 @@
 const url = "https://striveschool-api.herokuapp.com/api/deezer/artist/";
 const params = new URLSearchParams(location.search);
 console.log(params);
-// const id = params.get("id"); //this can either an id or null
-const id = 13612387; //this can either an id or null
+const id = params.get("id"); //this can either an id or null
+//const id = 13612387; //this can either an id or null
 console.log(id);
 
 window.onload = async () => {
@@ -112,8 +112,8 @@ const renderFetchedSongs = async (trackDataArray) => {
             </svg>
   
             <span class="artist-small mx-3">${(
-              singleSong.duration / 60
-            ).toFixed(2)}</span>
+          singleSong.duration / 60
+        ).toFixed(2)}</span>
             <button
               type="button"
               data-toggle="tooltip"

@@ -8,8 +8,9 @@ const options = {
 
 const params = new URLSearchParams(location.search)
 const albumID = params.get("id")
+console.log(albumID)
 
-const url = `https://deezerdevs-deezer.p.rapidapi.com/album/${albumID}`
+const url = ` https://striveschool-api.herokuapp.com/api/deezer/album/${albumID}`
 const albumImg = document.getElementsByClassName('album-img')[0]
 const albumName = document.getElementsByClassName('album-name')[0]
 const albumInfo = document.getElementsByClassName('album-info')[0]
@@ -26,14 +27,7 @@ const fetchData = async () => {
 
         if (res.ok) {
             data = await res.json()
-            console.log(data);
-            if (data.id === undefined) {
-                fetchData()
-            }
-            else {
-                displayData(data)
-            }
-
+            displayData()
         }
     } catch (error) {
         console.log(error)
