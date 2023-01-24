@@ -39,8 +39,8 @@ a {
 }
 #left-side {
   background-color: black;
-  flex: 0 0 20%;
-  height: 100vh;
+  flex: 0 0 5%;
+  height: 1000vh
   background-color: #000000;
 }
 #left-side a:hover {
@@ -67,10 +67,12 @@ a {
   height: 178.75px;
 }
 #spotifyPlay {
-  padding-left: 25px;
-  margin-left: 5vw;
-  margin-top: -9vh;
+  bottom: 0px;
+  top: 120px;
+  right: 10px;
   position: absolute;
+  opacity: 0;
+  transition: all 0.3s linear;
 }
 i {
   text-decoration: none;
@@ -79,4 +81,26 @@ i {
 .card {
   margin: 1.5em;
   position: relative;
+}
+.card:hover div > #spotifyPlay,
+#spotifyPlay:hover {
+  top: 115px;
+  transform:scale(1.1);
+  opacity: 1;
+  transition: all 0.2s linear;
+  z-index: 2;
+}
+
+.card-body {
+  color: black;
+  text-align: center;
+}
+.allRows {
+  padding-top: 20vh;
+}
+h3, h6{
+  padding-left: 20px;
+}
+h6{
+  color: #c0c0c0;
 }
