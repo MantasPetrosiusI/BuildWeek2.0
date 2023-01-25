@@ -1,3 +1,24 @@
+@font-face {
+    font-family: "GothamMedium";
+    src: url("../Gotham-Font/GothamMedium.ttf") format("TrueType");
+}
+
+@font-face {
+    font-family: "GothamBook";
+    src: url("../Gotham-Font/GothamBook.ttf") format("TrueType");
+}
+
+@font-face {
+    font-family: "GothamLight";
+    src: url("../Gotham-Font/GothamLight.ttf") format("TrueType");
+}
+
+@font-face {
+    font-family: "Gotham-Bold";
+    src: url("../Gotham-Font/Gotham-Bold.otf") format("OpenType");
+}
+
+
 :root {
     --font-GothamMedium: GothamMedium, Georgia, Cambria, "Times New Roman", Times,
         serif;
@@ -7,7 +28,7 @@
         sans-serif;
     --font-Gotham-Bold: Gotham-Bold, "Helvetica Neue", Helvetica, Arial,
         sans-serif;
-    --bg-color: #121212;
+    --bg-color: rgb(18, 18, 18);
     --active-font-color: #f8f8f8;
     --active-icon-fill: white;
     --icon-fill: rgb(193, 195, 198);
@@ -17,14 +38,38 @@
 
 
 
+
 .container-fluid {
     color: white;
     font-family: Helvetica Neue, helvetica, arial, Hiragino Kaku Gothic Pro, Meiryo, MS Gothic;
 }
 
-table {
-    background-color: var(--bg-color);
+
+.sidebar {
+    flex: 0 0 20%;
+    height: 100vh;
+    background-color: #000000;
+    position: sticky;
+    top: 0;
 }
+
+.sidebar-song-list {
+    list-style-type: none;
+    margin-block: 0;
+    padding-inline-start: 0;
+    font-family: var(--font-GothamMedium);
+    font-size: 14px;
+}
+
+.sidebar-song-list li a {
+    text-transform: capitalize;
+}
+
+.navbar {
+    height: 100vh;
+    padding: 1.5rem 1rem 1rem 1.5rem;
+}
+
 
 tr {
     color: white;
@@ -38,6 +83,7 @@ tr {
 .side-navbar {
     flex: 0 0 241px;
     background-color: black;
+    z-index: 3;
 }
 
 h1 {
@@ -47,7 +93,8 @@ h1 {
 
 
 .header-part {
-    background-color: var(--bg-color)
+    background: rgb(18, 18, 18);
+    background: linear-gradient(0deg, rgba(18, 18, 18, 1) 51%, rgba(111, 111, 111, 1) 100%);
 }
 
 .artist-picture {
@@ -112,4 +159,31 @@ a.track-list {
     border-bottom: 1px solid rgba(255, 255, 255, 0.10);
     color: rgba(255, 255, 255, 0.5);
     font-size: 0.75rem;
+}
+
+.bi-play-fill {
+    font-size: 20px;
+}
+
+th:first-of-type {
+    width: 50px;
+}
+
+.bi-play-fill {
+    color: white;
+}
+
+.table-hover tbody tr:hover {
+
+    background-color: hsla(0, 0%, 100%, 0.1);
+
+}
+
+.header-row {
+    background-color: #5ff550;
+}
+
+.row.pt-5 {
+    background: linear-gradient(rgb(152, 152, 152), rgb(56, 56, 56));
+
 }

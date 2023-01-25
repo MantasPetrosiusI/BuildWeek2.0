@@ -46,7 +46,7 @@ const displayData = async () => {
     await data.tracks.data.map((song) => {
         albumMusicList.innerHTML +=
             `
-        <tr class>
+        <tr class="track-row">
             <th scope="row" class="align-middle track-number">${counter}</th>
                 <td>
                     <div class="row m-0">${song.title}</div>
@@ -57,10 +57,26 @@ const displayData = async () => {
         `
         counter++;
     })
+    addEventListeners()
 }
 
 //const addEventListeners 0
 //history.back
+
+const addEventListeners = async () => {
+    let trackNumbers = document.getElementsByClassName('track-number');
+    for (const trackNumber of trackNumbers) {
+        let number = trackNumber.innerHTML;
+        trackNumber.closest('tr').addEventListener('mouseover', function () {
+            trackNumber.innerHTML = '<i class="bi bi-play-fill"></i>'
+        })
+        trackNumber.closest('tr').addEventListener('mouseleave', function () {
+            trackNumber.innerHTML = `${number}`
+        })
+    }
+
+
+}
 
 
 const convertSec = (sec, song = false) => {
