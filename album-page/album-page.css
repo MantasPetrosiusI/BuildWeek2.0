@@ -1,115 +1,109 @@
 :root {
-    --font-GothamMedium: GothamMedium, Georgia, Cambria, "Times New Roman", Times,
-        serif;
+  --font-GothamMedium: GothamMedium, Georgia, Cambria, "Times New Roman", Times,
+    serif;
 
-    --font-GothamBook: GothamBook, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-GothamLight: GothamLight, "Helvetica Neue", Helvetica, Arial,
-        sans-serif;
-    --font-Gotham-Bold: Gotham-Bold, "Helvetica Neue", Helvetica, Arial,
-        sans-serif;
-    --bg-color: #121212;
-    --active-font-color: #f8f8f8;
-    --active-icon-fill: white;
-    --icon-fill: rgb(193, 195, 198);
-    --text-color: rgb(145, 148, 150);
-    --neon-green: #5ff550;
+  --font-GothamBook: GothamBook, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-GothamLight: GothamLight, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  --font-Gotham-Bold: Gotham-Bold, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  --bg-color: #121212;
+  --active-font-color: #f8f8f8;
+  --active-icon-fill: white;
+  --icon-fill: rgb(193, 195, 198);
+  --text-color: rgb(145, 148, 150);
+  --neon-green: #5ff550;
 }
 
-
-
 .container-fluid {
-    color: white;
-    font-family: Helvetica Neue, helvetica, arial, Hiragino Kaku Gothic Pro, Meiryo, MS Gothic;
+  color: white;
+  font-family: Helvetica Neue, helvetica, arial, Hiragino Kaku Gothic Pro,
+    Meiryo, MS Gothic;
 }
 
 table {
-    background-color: var(--bg-color);
+  background-color: var(--bg-color);
 }
 
 tr {
-    color: white;
+  color: white;
 }
-
 
 .table-hover tbody tr:hover {
-    color: white
+  color: white;
 }
 
-.side-navbar {
+/* .side-navbar {
     flex: 0 0 241px;
     background-color: black;
-}
+} */
 
 h1 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
-
-
 .header-part {
-    background-color: var(--bg-color)
+  background-color: var(--bg-color);
 }
 
 .artist-picture {
-    width: 30px;
-    border-radius: 30px;
+  width: 30px;
+  border-radius: 30px;
 }
 
 th:last-child,
 td:last-child,
 th:nth-last-child(1),
 td:nth-last-child(1) {
-    text-align: right;
+  text-align: right;
 }
 
 .album-img {
-    max-width: 300px;
+  max-width: 300px;
 }
 
 i {
-    font-size: 30px;
-    color: rgba(255, 255, 255, 0.5);
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 i:hover {
-    color: white;
+  color: white;
 }
 
 .bi-play-circle-fill {
-    color: rgb(30 215 96);
-    font-size: 50px;
+  color: rgb(30 215 96);
+  font-size: 50px;
 }
 
 .bi-play-circle-fill:hover {
-    color: rgb(30 215 96);
-    transform: scale(1.1);
+  color: rgb(30 215 96);
+  transform: scale(1.1);
 }
 
-
 .stopwatchIcon {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .time-span {
-    color: rgba(255, 255, 255, 0.5);
-
+  color: rgba(255, 255, 255, 0.5);
 }
 
 a {
-    color: white;
+  color: white;
 }
 
 a:hover {
-    color: white;
+  color: white;
 }
 
 a.track-list {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.75rem;
 }
 
 .header-tr {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.75rem;
 }
