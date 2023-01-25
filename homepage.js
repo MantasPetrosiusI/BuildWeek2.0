@@ -15,34 +15,26 @@ const loadArtist = async (query) => {
     const response = await fetch(url + query, options);
 
     const songs = await response.json();
-    console.log(songs);
     const { data } = songs;
+    console.log(songs);
     const artists = data.slice(0, 8);
     artists.forEach((song) => {
       const popularAlbums = document.getElementById("inner");
-      if (artists[0] === song) {
-        popularAlbums.innerHTML += `<div class="carousel-item active"><div class="col col-2">
-            <div class="card">
-            <a href="./album-page/album-page.html?id=${song.album.id}"><img src="${song.album.cover_medium}" class="card-img-top" alt="..." ></a>
-            <div class="card-body">
-            <span>${song.album.title}</span></a>
-                <span id="spotifyPlay"><i class="bi bi-play-circle-fill" style="font-size: 45px; color: #1fdf64"></i></span>
-            </div>
-            </div>
-        </div>
-        </div>`;
-      } else {
-        popularAlbums.innerHTML += `<div class="carousel-item"><div class="col col-2">
-            <div class="card">
-            <a href="./album-page/album-page.html?id=${song.album.id}"><img src="${song.album.cover_medium}" class="card-img-top" alt="..." ></a>
-            <div class="card-body">
-            <span>${song.album.title}</span></a>
-                <span id="spotifyPlay"><i class="bi bi-play-circle-fill" style="font-size: 45px; color: #1fdf64"></i></span>
-            </div>
-            </div>
-        </div>
-        </div>`;
-      }
+      popularAlbums.innerHTML += `<div class="col-3" id="topCards">
+                    <div class="card mb-3">
+                      <div class="row no-gutters">
+                        <div class="col-4">
+                          <a href="./album-page/album-page.html?id=${song.album.id}"><img src="${song.album.cover}" class="card-img" alt="..." style="height:64px; width: 64px;></a>
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title">${song.album.title}</h5>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>`;
     });
   } catch (err) {
     console.log(err);
@@ -58,9 +50,9 @@ const loadAlbums = async () => {
       const { data } = albums;
       const displayAlbums = data.slice(0, 1);
       displayAlbums.forEach((album) => {
-        const popularAlbums = document.getElementById("recentlyPlayed");
+        const popularAlbums = document.getElementById("showsToTry");
         popularAlbums.innerHTML += `<div class="col col-2">
-<div class="card">
+<div class="card" id="bottomCard">
   <a href="./album-page/album-page.html?id=${album.album.id}"><img src="${album.album.cover_medium}" class="card-img-top" alt="..." ></a>
   <div class="card-body">
   <span>${album.album.title}</span></a>
@@ -83,9 +75,9 @@ const loadQueen = async (value) => {
     const { data } = songs;
     const displaySongs = data.slice(0, 6);
     displaySongs.forEach((song) => {
-      const popularAlbums = document.getElementById("showsToTry");
+      const popularAlbums = document.getElementById("recentlyPlayed");
       popularAlbums.innerHTML += `<div class="col col-2">
-<div class="card">
+<div class="card" id="bottomCard">
   <a href="./album-page/album-page.html?id=${song.album.id}"><img src="${song.album.cover_medium}" class="card-img-top" alt="..." ></a>
   <div class="card-body">
   <span>${song.album.title}</span></a>
@@ -103,3 +95,11 @@ window.onload = async () => {
   await loadAlbums();
   await loadArtist("Metallica");
 };
+
+function next() {
+  window.history.forward();
+}
+
+function previous() {
+  window.history.back();
+}
