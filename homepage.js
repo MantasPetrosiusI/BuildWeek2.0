@@ -1,6 +1,8 @@
 const url = "https://striveschool-api.herokuapp.com/api/deezer/search?q=";
 const par = new URLSearchParams(location.search);
 const id = par.get("id");
+const accountPill = document.getElementById('account-pill');
+
 
 const options = {
   method: "GET",
@@ -9,6 +11,15 @@ const options = {
     "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
   },
 };
+
+if (localStorage.getItem('username') === null) {
+  accountPill.innerText = 'User'
+}
+else {
+  accountPill.innerText = localStorage.getItem('username');
+}
+
+
 
 const loadArtist = async (query) => {
   try {
