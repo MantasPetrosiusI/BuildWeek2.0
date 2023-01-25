@@ -52,7 +52,12 @@ a {
 #arrows > div a {
   text-decoration: none;
 }
-
+.card.mb-4{
+  border: 1px solid white;
+    border-radius: 255px;
+    width: 90px;
+    height: 30px;
+}
 #right-side {
   width: 100%;
   color: white;
