@@ -86,3 +86,7 @@ input {
 .playceholder2 {
     width: 400px;
 }
+
+.dont-wrap {
+    white-space: nowrap;
+}
