@@ -17,23 +17,22 @@ const loadArtist = async (query) => {
     const songs = await response.json();
     const { data } = songs;
     console.log(songs);
-    const artists = data.slice(0, 6);
+    const artists = data.slice(0, 8);
+    let popularAlbums = document.getElementById("inner");
+    // console.log(popularAlbums);
     artists.forEach((song) => {
-      const popularAlbums = document.getElementById("inner");
-      popularAlbums.innerHTML += `<div class="col-2" id="topCards">
-                    <div class="card mb-4">
-                      <div class="row no-gutters">
-                        <div class="col-4">
-                          <a href="./album-page/album-page.html?id=${song.album.id}"><img src="${song.album.cover}" class="card-img" alt="..." style="height:64px; width: 64px;"></a>
-                        </div>
-                        <div class="col-md-8">
-                          <div class="card-body">
-                            <h5 class="card-title">${song.album.title}</h5>
-                            
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+      popularAlbums.innerHTML += `<div class="col-12 col-sm-12 col-md-4 col-lg-3 mb-4" id="topCards">
+                  <a href="./album-page/album-page.html?id=${song.album.id}" class="horizontal-card-block d-flex align-items-center">
+               
+                    <img
+                      src="${song.album.cover}"
+                      alt="${song.album.title}"
+                      width="60px"
+                      class="media-img"
+                    />
+
+                    <h6 class="ml-3 mb-0 text-truncate text-white">${song.album.title}</h6>
+                 </a>
                   </div>`;
     });
   } catch (err) {
@@ -49,17 +48,44 @@ const loadAlbums = async () => {
       const albums = await response.json();
       const { data } = albums;
       const displayAlbums = data.slice(0, 1);
+      let popularAlbums = document.getElementById("showsToTry");
       displayAlbums.forEach((album) => {
-        const popularAlbums = document.getElementById("showsToTry");
-        popularAlbums.innerHTML += `<div class="col col-2">
-<div class="card" id="bottomCard">
-  <a href="./album-page/album-page.html?id=${album.album.id}"><img src="${album.album.cover_medium}" class="card-img-top" alt="..." ></a>
-  <div class="card-body">
-  <span>${album.album.title}</span></a>
-    <span id="spotifyPlay"><i class="bi bi-play-circle-fill" style="font-size: 45px; color: #1fdf64"></i></span>
-  </div>
-</div>
-</div>`;
+        popularAlbums.innerHTML += `<div class=" col-12 mb-4 col-sm-4 mb-sm-4 col-md-4 mb-md-4 col-lg-3 mb-lg-4 col-xl-2">
+        <div  class="album-card w-100">
+        <a href="./album-page/album-page.html?id=${album.album.id}" class="w-100">
+          <button type="button" title="Play" class="play-green-btn">
+            <svg
+              role="img"
+              height="24"
+              width="24"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              data-encore-id="icon"
+            >
+              <path
+                d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"
+              ></path>
+            </svg>
+          </button>
+          <div class="card">
+            <img
+              src="${album.album.cover_medium}"
+              class="card-img-top mb-3"
+              alt="${album.album.title}"
+             width="100%"
+            />
+            <div class="card-body p-0">
+              <h6
+                class="card-title text-capitalize text-truncate text-white mb-0"
+              >
+              ${album.album.title}
+              </h6>
+              <p class="card-text text-truncate mt-1"> ${album.title_short}</p>
+            </div>
+          </div>
+          </a>
+        </div>
+      </div>`;
       });
     }
   } catch (err) {
@@ -74,26 +100,71 @@ const loadQueen = async (value) => {
     const songs = await response.json();
     const { data } = songs;
     const displaySongs = data.slice(0, 6);
+    console.log(displaySongs);
+    let popularAlbums = document.getElementById("recentlyPlayed");
     displaySongs.forEach((song) => {
-      const popularAlbums = document.getElementById("recentlyPlayed");
-      popularAlbums.innerHTML += `<div class="col col-2">
-<div class="card" id="bottomCard">
-  <a href="./album-page/album-page.html?id=${song.album.id}"><img src="${song.album.cover_medium}" class="card-img-top" alt="..." ></a>
-  <div class="card-body">
-  <span>${song.album.title}</span></a>
-    <span id="spotifyPlay"><i class="bi bi-play-circle-fill" style="font-size: 45px; color: #1fdf64"></i></span>
-  </div>
-</div>
-</div>`;
+      popularAlbums.innerHTML += `<div class=" col-12 mb-4 col-sm-4 mb-sm-4 col-md-4 mb-md-4 col-lg-3 mb-lg-4 col-xl-2">
+        <div  class="album-card w-100">
+        <a href="./album-page/album-page.html?id=${song.album.id}" class="w-100">
+          <button type="button" title="Play" class="play-green-btn">
+            <svg
+              role="img"
+              height="24"
+              width="24"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              data-encore-id="icon"
+            >
+              <path
+                d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"
+              ></path>
+            </svg>
+          </button>
+          <div class="card">
+            <img
+              src="${song.album.cover_medium}"
+              class="card-img-top mb-3"
+              alt="${song.album.title}"
+             width="100%"
+            />
+            <div class="card-body p-0">
+              <h6
+                class="card-title text-capitalize text-truncate text-white mb-0"
+              >
+              ${song.album.title}
+              </h6>
+              <p class="card-text text-truncate mt-1"> ${song.title_short}</p>
+            </div>
+          </div>
+          </a>
+        </div>
+      </div>`;
     });
   } catch (err) {
     console.log(err);
   }
 };
+
+let header = document.querySelector(".content-header");
+function scrollHeader() {
+  document.addEventListener("scroll", () => {
+    let scrollPosition = window.scrollY;
+    if (scrollPosition >= 1) {
+      header.classList.add("header-bg-color");
+      // header.style.backgroundColor = "#000";
+    }
+    if (scrollPosition < 1) {
+      header.classList.remove("header-bg-color");
+      // header.style.backgroundColor = "transparent";
+    }
+  });
+}
+
 window.onload = async () => {
+  await loadArtist("Metallica");
   await loadQueen("queen");
   await loadAlbums();
-  await loadArtist("Metallica");
+  await scrollHeader();
 };
 
 function next() {

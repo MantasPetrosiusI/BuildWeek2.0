@@ -109,6 +109,7 @@ a:hover {
 
 .main-content {
   flex: 0 0 80%;
+  position: relative;
 }
 
 .bi-arrow-left-circle-fill {
@@ -134,11 +135,31 @@ a:hover {
 
 .content-header {
   height: 8vh;
-  margin-inline: 32px;
+  padding-inline: 32px;
+  padding-block: 1em;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
-
+.header-bg-color {
+  background-color: #000;
+  transition: all 0.3s linear;
+}
+.dropdown {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  color: var(--active-font-color);
+  padding-left: 4px;
+}
+.account-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #535353;
+}
 .arrow-bg {
   background-color: rgba(0, 0, 0, 0.7);
+  border-width: 0;
 }
 
 .content-heading {
@@ -259,7 +280,15 @@ h3 {
 .artist-bg-img {
   border-radius: 50%;
 }
-
+/* -----------------------------------------------------header */
+.arrow-bg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* ----------------------------------------------------------------------Player */
 .player {
   height: 90px;
@@ -293,7 +322,6 @@ h3 {
 @media screen and (min-width: 768px) {
   .medium-screen-p {
     padding-inline: 32px;
-    /* margin-top: 10px; */
   }
 }
 
@@ -301,7 +329,6 @@ h3 {
   .medium-screen-p {
     padding-left: 32px;
     padding-right: 16px;
-    /* margin-top: 10px; */
   }
 }
 

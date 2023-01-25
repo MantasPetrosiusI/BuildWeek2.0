@@ -8,6 +8,7 @@ console.log(id);
 window.onload = async () => {
   await getArtist(id);
   await fetchTrack(id);
+  await scrollHeader();
 };
 
 const getArtist = async (id) => {
@@ -145,3 +146,17 @@ const renderFetchedSongs = async (trackDataArray) => {
     console.error(err);
   }
 };
+let header = document.querySelector(".content-header");
+function scrollHeader() {
+  document.addEventListener("scroll", () => {
+    let scrollPosition = window.scrollY;
+    if (scrollPosition >= 1) {
+      header.classList.add("header-bg-color");
+      // header.style.backgroundColor = "#000";
+    }
+    if (scrollPosition < 1) {
+      header.classList.remove("header-bg-color");
+      // header.style.backgroundColor = "transparent";
+    }
+  });
+}
