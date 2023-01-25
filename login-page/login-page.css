@@ -1,0 +1,88 @@
+.logo-img {
+    max-width: 200px;
+}
+
+.row.py-4.d-flex.justify-content-center {
+    border-bottom: 1px solid rgb(220 220 220)
+}
+
+#exampleCheck1 {
+    accent-color: rgb(70 184 80);
+}
+
+.line-div {
+    width: 174px;
+    border-bottom: 1px solid black
+}
+
+.line-div-long {
+    width: 400px;
+    border-bottom: 1px solid black
+}
+
+.continue {
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+
+.pill {
+    width: 400px;
+    border-radius: 20px;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.facebook {
+    background-color: rgb(62 90 155);
+}
+
+.apple {
+    background-color: black;
+}
+
+.mx-3 {
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+input {
+    max-width: 400px;
+}
+
+#login-btn {
+    background-color: rgb(71 184 80);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.forgot-p {
+    color: rgb(71 184 80);
+}
+
+.no-account {
+    font-weight: 700;
+}
+
+.sign-up {
+    width: 400px;
+    border-radius: 20px;
+    border: 2px solid black;
+    font-size: 0.9rem;
+}
+
+.bottom-text {
+    width: 500px;
+    font-size: 0.75rem;
+}
+
+.color-green {
+    color: rgb(71 184 80);
+}
+
+.playceholder2 {
+    width: 400px;
+}
