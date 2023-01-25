@@ -20,7 +20,7 @@ const loadArtist = async (query) => {
     const artists = data.slice(0, 8);
     artists.forEach((song) => {
       const popularAlbums = document.getElementById("inner");
-      popularAlbums.innerHTML += `<div class="col-3" id="topCards">
+      popularAlbums.innerHTML += `<div class="col-2" id="topCards">
                     <div class="card mb-3">
                       <div class="row no-gutters">
                         <div class="col-4">
