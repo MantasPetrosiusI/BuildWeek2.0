@@ -94,7 +94,7 @@ h1 {
 
 .header-part {
     background: rgb(18, 18, 18);
-    background: linear-gradient(0deg, rgba(18, 18, 18, 1) 51%, rgba(111, 111, 111, 1) 100%);
+    background: linear-gradient(0deg, rgba(18, 18, 18, 1) 56%, rgba(111, 111, 111, 1) 100%);
 }
 
 .artist-picture {
@@ -184,6 +184,6 @@ th:first-of-type {
 }
 
 .row.pt-5 {
-    background: linear-gradient(rgb(152, 152, 152), rgb(56, 56, 56));
+    background: linear-gradient(rgb(152, 152, 152), rgb(82, 82, 82));
 
 }
