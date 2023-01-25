@@ -17,14 +17,14 @@ const loadArtist = async (query) => {
     const songs = await response.json();
     const { data } = songs;
     console.log(songs);
-    const artists = data.slice(0, 8);
+    const artists = data.slice(0, 6);
     artists.forEach((song) => {
       const popularAlbums = document.getElementById("inner");
       popularAlbums.innerHTML += `<div class="col-2" id="topCards">
-                    <div class="card mb-3">
+                    <div class="card mb-4">
                       <div class="row no-gutters">
                         <div class="col-4">
-                          <a href="./album-page/album-page.html?id=${song.album.id}"><img src="${song.album.cover}" class="card-img" alt="..." style="height:64px; width: 64px;></a>
+                          <a href="./album-page/album-page.html?id=${song.album.id}"><img src="${song.album.cover}" class="card-img" alt="..." style="height:64px; width: 64px;"></a>
                         </div>
                         <div class="col-md-8">
                           <div class="card-body">
