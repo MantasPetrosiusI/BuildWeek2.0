@@ -24,6 +24,8 @@ body {
     rgba(58, 8, 9, 1) 0%,
     rgba(19, 15, 14, 1) 100%
   );
+  margin: 0;
+  padding: 0;
   width: 100%;
   display: flex;
   align-items: flex-start;
