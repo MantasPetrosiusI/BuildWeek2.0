@@ -28,8 +28,9 @@ body {
     color: var(--primary-color);
 }
 
-i {
+.music-player-container i {
     color: var(--secondary-color);
+    font-size: 1.5rem;
 }
 
 i:hover {

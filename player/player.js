@@ -10,15 +10,15 @@ const playerOptions = {
     }
 };
 
-console.log("here")
-
-
-
-
 const audioPlayer = async (albumId) => {
     let respons = await fetch(` https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`, playerOptions)
     let data = await respons.json();
     const songs = data.tracks
+    let arraySongs = []
+    songs.data.map((song)=>{
+        arraySongs.push(song)
+        console.log(song)
+    })
     console.log(songs.data)
     let i = 0;
 
@@ -98,20 +98,26 @@ const audioPlayer = async (albumId) => {
     })
     prev.addEventListener('click', () =>{
         if(i===0){
-            audio.src = `${songs.data[songs.data.length].preview}`
+            i = arraySongs.length-1;
+            audio.src = `${songs.data[i].preview}`
             audio.play()
+            
         }else{
-            audio.src = `${songs.data[i-1].preview}`
+            i--;
+            audio.src = `${songs.data[i].preview}`
             audio.play()
+            
         }
         
     })
     next.addEventListener('click', () =>{
-        if(i === songs.data.length){
-            audio.src = audio.src = `${songs.data[0].preview}`
+        if(i === arraySongs.length){
+            i = 0;
+            audio.src = audio.src = `${songs.data[i].preview}`
             audio.play()
         }else{
-            audio.src = `${songs.data[i++].preview}`
+            i++;
+            audio.src = `${songs.data[i].preview}`
             audio.play()
         }
     })
