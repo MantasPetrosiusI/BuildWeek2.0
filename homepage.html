@@ -168,8 +168,9 @@
         <i class="fa-solid fa-computer"></i>
         <div class="volume-bar">
           <i class="fas fa-volume-down"></i>
+          <i class="fa-solid fa-volume-xmark"></i>
           <div class="progress-bar">
-            <div class="progress"></div>
+            <input type="range" oninput="setVol(this)"  min=0 max=100 step=0.01 value="50" >
           </div>
         </div>
       </div>

@@ -110,14 +110,6 @@ i:hover {
     gap: 2em;
 }
 
-.play-pause {
-    display: inline-block;
-    padding: 1em;
-    background-color: var(--primary-color);
-    color: #111;
-    border-radius: 50%;
-}
-
 .play:hover,
 .pause:hover {
     transform: scale(1.1);
@@ -138,12 +130,13 @@ i:hover {
     background-color: #ccc4;
 }
 
-.progress {
+.progress-container>.progress-bar.progress {
     position: relative;
     height: 100%;
-    width: 30%;
+    width: 0%;
     border-radius: 10px;
     background-color: var(--secondary-color);
+    transition: width 0.5s linear;
 }
 
 .progress-bar:hover .progress {
@@ -187,10 +180,13 @@ i:hover {
 .pause.fa-solid.fa-circle-pause {
     display: none;
 }
-
+.fa-solid.fa-volume-xmark{
+    display:none;
+}
 .music-player-container {
     position: sticky;
     bottom: 0;
     z-index: 5;
 
 }
+/* Make volume bar based on %
