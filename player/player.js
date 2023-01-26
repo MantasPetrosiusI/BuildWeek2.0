@@ -16,38 +16,35 @@ console.log("here")
 
 
 const audioPlayer = async (albumId) => {
-
     let respons = await fetch(` https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`, playerOptions)
     let data = await respons.json();
     const songs = data.tracks
-    console.log(songs);
-
-
-
-    //CHANGE EVERYTHING THATS HARDCODED ACCORDINGLY TO OTHER JS FILES TO CORRESPOND TO THEIR FETCH/ onClick e.g songs.data[14]
-
+    console.log(songs.data)
+    let i = 0;
 
     const play = document.querySelector('.play.fa-solid.fa-circle-play');
     const pause = document.querySelector('.pause.fa-solid.fa-circle-pause');
+    const prev = document.querySelector('.fas.fa-step-backward');
+    const next = document.querySelector('.fas.fa-step-forward');
     const loop = document.querySelector('.fa-solid.fa-repeat');
-    const shuffle = document.querySelector('.fas.fa-random')
-    const audio = new Audio();
-    audio.pause();
-    audio.currentTime = 0;
-    audio = new Audio(`${songs.data[0].preview}`).play()
+    const shuffle = document.querySelector('.fas.fa-random');
+
+    audio = document.querySelector('audio')
+    audio.play();
+    audio.src =  `${songs.data[i].preview}`;
+    
 
     shuffle.addEventListener('click', () => {
         let randomSong = songs.data[Math.floor(Math.random() * songs.data.length)].preview
-        audio.pause()
-        audio = new Audio(`${randomSong}`).play()
+        audio.src = `${randomSong}`
+        audio.play()
     })
-    document.querySelector('.image-container').innerHTML = `<img src="${songs.data[0].album.cover_small}" alt=""/>`
-    document.querySelector('p.title').innerHTML = `<b>${songs.data[0].album.title}</b>`;
-    document.querySelector('p.artist').innerHTML = `${songs.data[0].artist.name}`;
-
-    let state = "paused";
+    document.querySelector('.image-container').innerHTML = `<img src="${songs.data[i].album.cover_small}" alt=""/>`
+    document.querySelector('p.title').innerHTML = `<b>${songs.data[i].album.title}</b>`;
+    document.querySelector('p.artist').innerHTML = `${songs.data[i].artist.name}`;
+    console.log(audio.paused)
     play.addEventListener('click', () => {
-        if (state === "paused") {
+        if (audio.paused) {
             audio.play()
             play.style.display = "none";
             pause.style.display = "block";
@@ -80,8 +77,6 @@ const audioPlayer = async (albumId) => {
         }
 
     })
-
-
     songCurrent = setInterval(function () {
         let current = document.getElementById("current")
         let mins = Math.floor(audio.currentTime / 60);
@@ -101,9 +96,24 @@ const audioPlayer = async (albumId) => {
         }
         songLength.innerHTML = mins + ':' + secs;
     })
+    prev.addEventListener('click', () =>{
+        if(i===0){
+            audio.src = `${songs.data[songs.data.length].preview}`
+            audio.play()
+        }else{
+            audio.src = `${songs.data[i-1].preview}`
+            audio.play()
+        }
+        
+    })
+    next.addEventListener('click', () =>{
+        if(i === songs.data.length){
+            audio.src = audio.src = `${songs.data[0].preview}`
+            audio.play()
+        }else{
+            audio.src = `${songs.data[i++].preview}`
+            audio.play()
+        }
+    })
 }
-audioPlayer("915785")
-let audioHtml = document.querySelector('#audio');
-let dur = document.querySelector('#dur')
-
-
+audioPlayer("915785");
