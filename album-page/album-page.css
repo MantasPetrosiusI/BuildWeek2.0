@@ -187,3 +187,7 @@ th:first-of-type {
     background: linear-gradient(rgb(152, 152, 152), rgb(82, 82, 82));
 
 }
+
+#songHeart {
+    font-size: 1rem;
+}

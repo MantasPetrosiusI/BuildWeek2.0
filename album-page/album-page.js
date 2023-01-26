@@ -52,7 +52,7 @@ const displayData = async () => {
                     <div class="row m-0">${song.title}</div>
                     <div class="row m-0"><a href="../Artist Page/artist.html?id=${data.artist.id}" class="track-list">${song.artist.name}</a></div>
                 </td>
-            <td class="ml-auto align-middle">${convertSec(song.duration)}</td>
+            <td class="ml-auto align-middle"><span class ="mr-5 tracklistHeart"></span>${convertSec(song.duration)}</td>
         </tr>
         `
         counter++;
@@ -65,6 +65,8 @@ const displayData = async () => {
 
 const addEventListeners = async () => {
     let trackNumbers = document.getElementsByClassName('track-number');
+    let heartIcons = document.getElementsByClassName('tracklistHeart');
+
     for (const trackNumber of trackNumbers) {
         let number = trackNumber.innerHTML;
         trackNumber.closest('tr').addEventListener('mouseover', function () {
@@ -72,6 +74,16 @@ const addEventListeners = async () => {
         })
         trackNumber.closest('tr').addEventListener('mouseleave', function () {
             trackNumber.innerHTML = `${number}`
+        })
+    }
+
+
+    for (const heartIcon of heartIcons) {
+        heartIcon.closest('tr').addEventListener('mouseover', function () {
+            heartIcon.innerHTML = '<i class="bi bi-heart" id="songHeart"></i>'
+        })
+        heartIcon.closest('tr').addEventListener('mouseleave', function () {
+            heartIcon.innerHTML = ''
         })
     }
 
