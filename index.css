@@ -102,9 +102,8 @@ i:hover{
     color: #111;
     border-radius: 50%;
 }
-.play-pause:hover{
+.play:hover, .pause:hover{
     transform: scale(1.1);
-    color: #111;
 }
 .progress-container{
     width: 100%;
@@ -157,4 +156,7 @@ i:hover{
 }
 .volume-bar .progress-bar:hover .progress::after{
     --size: .8em;
+}
+.pause.fa-solid.fa-circle-pause{
+    display:none;
 }
