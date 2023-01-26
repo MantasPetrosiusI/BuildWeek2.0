@@ -65,7 +65,7 @@ a:hover {
   border-width: 0;
 }
 .sidebar {
-  flex: 0 0 20%;
+  flex: 0 0 15%;
   height: 100vh;
   background-color: #000000;
   position: sticky;
@@ -108,7 +108,7 @@ a:hover {
 }
 
 .main-content {
-  flex: 0 0 80%;
+  flex: 0 0 85%;
   position: relative;
 }
 
@@ -168,7 +168,7 @@ a:hover {
   padding-bottom: 32px;
 }
 
-h1 {
+h2 {
   font-family: var(--font-Gotham-Bold);
   font-size: 6rem;
 }
@@ -288,6 +288,33 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.input-group {
+  width: 360px;
+  background-color: var(--active-icon-fill);
+  border-radius: 20px;
+  padding-inline: 10px;
+  padding-block: 6px;
+}
+input::placeholder {
+  font-family: var(--font-GothamBook);
+  font-size: 0.875rem;
+  color: var(--bg-color);
+}
+input:focus-visible {
+  outline: none;
+}
+.search-icon {
+  padding-top: 4px;
+  color: var(--bg-color);
+}
+.search-icon::before {
+  font-size: 20px;
+}
+.search-input {
+  border-radius: 20px;
+  border-width: 0;
+  width: 84%;
 }
 /* ----------------------------------------------------------------------Player */
 .player {

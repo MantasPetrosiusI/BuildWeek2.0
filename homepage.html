@@ -1,189 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/2393590cb4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./Artist Page/artist.css" />
+    <link rel="stylesheet" href="./home.css" />
+    <link rel="stylesheet" href="./player/player.css" />
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
-  <script src="https://kit.fontawesome.com/2393590cb4.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./Artist Page/artist.css" />
-  <link rel="stylesheet" href="./home.css" />
-  <link rel="stylesheet" href="./player/player.css" />
+    <title>Spotify</title>
+  </head>
 
+  <body>
+    <div class="d-flex flex-column">
+      <div class="d-flex">
+        <aside class="sidebar">
+          <nav class="navbar d-block">
+            <span class="d-flex align-items-center header-logo mb-4">
+              <img
+                class="mr-2"
+                src="../Assets/spotify.svg"
+                alt="spotify logo"
+                width="38px"
+              />
+              Spotify
+            </span>
+            <div id="navbarText">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a href="../homepage.html" class="d-flex align-items-center">
+                    <i class="bi bi-house-door mr-3"></i>
+                    <span class="nav-link"
+                      >Home <span class="sr-only">(current)</span></span
+                    ></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="./Search/search.html"
+                    class="d-flex align-items-center"
+                  >
+                    <i class="bi bi-search mr-3"></i>
+                    <span class="nav-link" href="#">Search </span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="d-flex align-items-center">
+                    <i class="bi bi-collection mr-3"></i>
+                    <span class="nav-link" href="#">Library </span></a
+                  >
+                </li>
+                <li class="nav-item mt-4">
+                  <a href="#" class="d-flex align-items-center">
+                    <i class="bi bi-plus-square mr-3"></i>
+                    <span class="nav-link" href="#">Create Playlist </span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="d-flex align-items-center">
+                    <i class="bi bi-bag-heart-fill mr-3"></i>
+                    <span class="nav-link" href="#">Liked Songs </span></a
+                  >
+                </li>
+              </ul>
+              <hr />
+              <ul class="sidebar-song-list">
+                <li class="mb-1"><a href="#">Jun19</a></li>
+                <li class="mb-1"><a href="#">Funky Heavy Bluesy</a></li>
+                <li class="mb-1"><a href="#">Your Top Songs 2020</a></li>
+                <li class="mb-1"><a href="#">Funky heavy Bluesy</a></li>
+                <li class="mb-1"><a href="#">Funky Heavy Bluesy</a></li>
+              </ul>
+            </div>
+          </nav>
+        </aside>
+        <div id="right-side" class="main-content padding-bottom">
+          <div class="background-gray"></div>
+          <div class="d-flex align-items-center content-header mx-0">
+            <button onclick="history.back()" class="arrow-bg mr-2">
+              <svg
+                role="img"
+                height="16"
+                width="16"
+                aria-hidden="true"
+                viewBox="0 0 16 16"
+                data-encore-id="icon"
+                fill="#fff"
+              >
+                <path
+                  d="M11.03.47a.75.75 0 010 1.06L4.56 8l6.47 6.47a.75.75 0 11-1.06 1.06L2.44 8 9.97.47a.75.75 0 011.06 0z"
+                ></path>
+              </svg>
+            </button>
+            <button id="previous" class="arrow-bg">
+              <svg
+                role="img"
+                height="16"
+                width="16"
+                aria-hidden="true"
+                class="Svg-sc-ytk21e-0 kcBZLg IYDlXmBmmUKHveMzIPCF"
+                viewBox="0 0 16 16"
+                data-encore-id="icon"
+                fill="#fff"
+              >
+                <path
+                  d="M4.97.47a.75.75 0 000 1.06L11.44 8l-6.47 6.47a.75.75 0 101.06 1.06L13.56 8 6.03.47a.75.75 0 00-1.06 0z"
+                ></path>
+              </svg>
+            </button>
 
-
-  <title>Spotify</title>
-</head>
-
-<body>
-  <div class="d-flex">
-    <aside class="sidebar">
-      <nav class="navbar d-block">
-        <span class="d-flex align-items-center header-logo mb-4">
-          <img class="mr-2" src="../Assets/spotify.svg" alt="spotify logo" width="38px" />
-          Spotify
-        </span>
-        <div id="navbarText">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a href="../homepage.html" class="d-flex align-items-center">
-                <i class="bi bi-house-door mr-3"></i>
-                <span class="nav-link">Home <span class="sr-only">(current)</span></span></a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="d-flex align-items-center">
-                <i class="bi bi-search mr-3"></i>
-                <span class="nav-link" href="#">Search </span></a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="d-flex align-items-center">
-                <i class="bi bi-collection mr-3"></i>
-                <span class="nav-link" href="#">Library </span></a>
-            </li>
-            <li class="nav-item mt-4">
-              <a href="#" class="d-flex align-items-center">
-                <i class="bi bi-plus-square mr-3"></i>
-                <span class="nav-link" href="#">Create Playlist </span></a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="d-flex align-items-center">
-                <i class="bi bi-bag-heart-fill mr-3"></i>
-                <span class="nav-link" href="#">Liked Songs </span></a>
-            </li>
-          </ul>
-          <hr />
-          <ul class="sidebar-song-list">
-            <li class="mb-1"><a href="#">Jun19</a></li>
-            <li class="mb-1"><a href="#">Funky Heavy Bluesy</a></li>
-            <li class="mb-1"><a href="#">Your Top Songs 2020</a></li>
-            <li class="mb-1"><a href="#">Funky heavy Bluesy</a></li>
-            <li class="mb-1"><a href="#">Funky Heavy Bluesy</a></li>
-          </ul>
-        </div>
-      </nav>
-    </aside>
-    <div id="right-side" class="main-content padding-bottom">
-      <div class="background-gray"></div>
-      <div class="d-flex align-items-center content-header mx-0">
-        <button onclick="history.back()" class="arrow-bg mr-2">
-          <svg role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16" data-encore-id="icon"
-            fill="#fff">
-            <path
-              d="M11.03.47a.75.75 0 010 1.06L4.56 8l6.47 6.47a.75.75 0 11-1.06 1.06L2.44 8 9.97.47a.75.75 0 011.06 0z">
-            </path>
-          </svg>
-        </button>
-        <button id="previous" class="arrow-bg">
-          <svg role="img" height="16" width="16" aria-hidden="true" class="Svg-sc-ytk21e-0 kcBZLg IYDlXmBmmUKHveMzIPCF"
-            viewBox="0 0 16 16" data-encore-id="icon" fill="#fff">
-            <path
-              d="M4.97.47a.75.75 0 000 1.06L11.44 8l-6.47 6.47a.75.75 0 101.06 1.06L13.56 8 6.03.47a.75.75 0 00-1.06 0z">
-            </path>
-          </svg>
-        </button>
-
-        <div class="dropdown d-flex align-items-center ml-auto">
-          <div class="account-circle d-flex align-items-center justify-content-center">
-            <svg role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16" data-encore-id="icon"
-              fill="#fff">
-              <path
-                d="M6.233.371a4.388 4.388 0 015.002 1.052c.421.459.713.992.904 1.554.143.421.263 1.173.22 1.894-.078 1.322-.638 2.408-1.399 3.316l-.127.152a.75.75 0 00.201 1.13l2.209 1.275a4.75 4.75 0 012.375 4.114V16H.382v-1.143a4.75 4.75 0 012.375-4.113l2.209-1.275a.75.75 0 00.201-1.13l-.126-.152c-.761-.908-1.322-1.994-1.4-3.316-.043-.721.077-1.473.22-1.894a4.346 4.346 0 01.904-1.554c.411-.448.91-.807 1.468-1.052zM8 1.5a2.888 2.888 0 00-2.13.937 2.85 2.85 0 00-.588 1.022c-.077.226-.175.783-.143 1.323.054.921.44 1.712 1.051 2.442l.002.001.127.153a2.25 2.25 0 01-.603 3.39l-2.209 1.275A3.25 3.25 0 001.902 14.5h12.196a3.25 3.25 0 00-1.605-2.457l-2.209-1.275a2.25 2.25 0 01-.603-3.39l.127-.153.002-.001c.612-.73.997-1.52 1.052-2.442.032-.54-.067-1.097-.144-1.323a2.85 2.85 0 00-.588-1.022A2.888 2.888 0 008 1.5z">
-              </path>
-            </svg>
+            <div class="dropdown d-flex align-items-center ml-auto">
+              <div
+                class="account-circle d-flex align-items-center justify-content-center"
+              >
+                <svg
+                  role="img"
+                  height="16"
+                  width="16"
+                  aria-hidden="true"
+                  viewBox="0 0 16 16"
+                  data-encore-id="icon"
+                  fill="#fff"
+                >
+                  <path
+                    d="M6.233.371a4.388 4.388 0 015.002 1.052c.421.459.713.992.904 1.554.143.421.263 1.173.22 1.894-.078 1.322-.638 2.408-1.399 3.316l-.127.152a.75.75 0 00.201 1.13l2.209 1.275a4.75 4.75 0 012.375 4.114V16H.382v-1.143a4.75 4.75 0 012.375-4.113l2.209-1.275a.75.75 0 00.201-1.13l-.126-.152c-.761-.908-1.322-1.994-1.4-3.316-.043-.721.077-1.473.22-1.894a4.346 4.346 0 01.904-1.554c.411-.448.91-.807 1.468-1.052zM8 1.5a2.888 2.888 0 00-2.13.937 2.85 2.85 0 00-.588 1.022c-.077.226-.175.783-.143 1.323.054.921.44 1.712 1.051 2.442l.002.001.127.153a2.25 2.25 0 01-.603 3.39l-2.209 1.275A3.25 3.25 0 001.902 14.5h12.196a3.25 3.25 0 00-1.605-2.457l-2.209-1.275a2.25 2.25 0 01-.603-3.39l.127-.153.002-.001c.612-.73.997-1.52 1.052-2.442.032-.54-.067-1.097-.144-1.323a2.85 2.85 0 00-.588-1.022A2.888 2.888 0 008 1.5z"
+                  ></path>
+                </svg>
+              </div>
+              <button
+                id="account-pill"
+                class="btn my-0 dropdown-toggle text-white d-flex align-items-center"
+                type="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              ></button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
           </div>
-          <button id="account-pill" class="btn my-0 dropdown-toggle text-white d-flex align-items-center" type="button"
-            data-toggle="dropdown" aria-expanded="false">
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+          <div class="container-fluid">
+            <div class="mt-5">
+              <h4 class="px-0 text-white mb-3">Good afternoon</h4>
+
+              <div class="row" id="inner"></div>
+            </div>
+            <div>
+              <h4 class="px-0 text-white mb-3">Recently played</h4>
+
+              <div class="row" id="recentlyPlayed"></div>
+            </div>
+            <div>
+              <h4 class="px-0 text-white mb-0">Shows to Try</h4>
+              <small>Podcasts we think you'll get hooked on.</small>
+
+              <div class="row mt-4" id="showsToTry"></div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="container-fluid">
-        <div class="mt-5">
-          <h4 class="px-0 text-white mb-3">Good afternoon</h4>
-
-          <div class="row" id="inner"></div>
-        </div>
-        <div>
-          <h4 class="px-0 text-white mb-3">Recently played</h4>
-
-          <div class="row" id="recentlyPlayed"></div>
-        </div>
-        <div>
-          <h4 class="px-0 text-white mb-0">Shows to Try</h4>
-          <small>Podcasts we think you'll get hooked on.</small>
-
-          <div class="row mt-4" id="showsToTry"></div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="music-player-container">
-    <audio id="audio">
-      <source src="" type="audio/mpeg" preload="metadata">
-    </audio>
-    <div class="music-player">
-      <div class="song-bar">
-        <div class="song-infos">
-          <div class="image-container">
+    <div class="music-player-container">
+      <audio id="audio">
+        <source src="" type="audio/mpeg" preload="metadata" />
+      </audio>
+      <div class="music-player">
+        <div class="song-bar">
+          <div class="song-infos">
+            <div class="image-container"></div>
+            <div class="song-description">
+              <p class="title"></p>
+              <p class="artist"></p>
+            </div>
           </div>
-          <div class="song-description">
-            <p class="title">
-            </p>
-            <p class="artist"></p>
+          <div class="icons">
+            <i class="far fa-heart"></i>
+            <i class="fa-solid fa-compress"></i>
           </div>
         </div>
-        <div class="icons">
-          <i class="far fa-heart"></i>
-          <i class="fa-solid fa-compress"></i>
-        </div>
-      </div>
-      <div class="progress-controller">
-        <div class="control-buttons">
-          <i class="fas fa-random"></i>
-          <i class="fas fa-step-backward"></i>
-          <i class="play fa-solid fa-circle-play"></i>
-          <i class="pause fa-solid fa-circle-pause"></i>
-          <i class="fas fa-step-forward"></i>
-          <i class="fa-solid fa-repeat"></i>
-        </div>
-        <div class="progress-container">
-          <span id="current">0:00</span>
-          <div class="progress-bar">
-            <div class="progress"></div>
+        <div class="progress-controller">
+          <div class="control-buttons">
+            <i class="fas fa-random"></i>
+            <i class="fas fa-step-backward"></i>
+            <i class="play fa-solid fa-circle-play"></i>
+            <i class="pause fa-solid fa-circle-pause"></i>
+            <i class="fas fa-step-forward"></i>
+            <i class="fa-solid fa-repeat"></i>
           </div>
-          <span id="length">0:00</span>
+          <div class="progress-container">
+            <span id="current">0:00</span>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <span id="length">0:00</span>
+          </div>
         </div>
-      </div>
-      <div class="other-features">
-        <i class="fas fa-list-ul"></i>
-        <i class="fa-solid fa-computer"></i>
-        <div class="volume-bar">
-          <i class="fas fa-volume-down"></i>
-          <div class="progress-bar">
-            <div class="progress"></div>
+        <div class="other-features">
+          <i class="fas fa-list-ul"></i>
+          <i class="fa-solid fa-computer"></i>
+          <div class="volume-bar">
+            <i class="fas fa-volume-down"></i>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <script src="/player/player.js"></script>
-  <script src="https://kit.fontawesome.com/2393590cb4.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
-    crossorigin="anonymous"></script>
-  <script src="./homepage.js"></script>
-</body>
-
+    <script src="/player/player.js"></script>
+    <script
+      src="https://kit.fontawesome.com/2393590cb4.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./homepage.js"></script>
+  </body>
 </html>

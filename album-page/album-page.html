@@ -1,170 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="../player/player.css" />
-    <link rel="stylesheet" href="album-page.css">
-    <link rel="stylesheet" href="../player/player.css">
+
+    <link rel="stylesheet" href="album-page.css" />
+    <link rel="stylesheet" href="../Artist Page/artist.css" />
+    <link rel="stylesheet" href="../player/player.css" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container-fluid">
-
-        <div class="row">
-            <div class="col side-navbar">
-
-                <aside class="sidebar">
-                    <nav class="navbar d-block">
-                        <span class="d-flex align-items-center header-logo mb-4">
-                            <img class="mr-2" src="../Assets/spotify.svg" alt="spotify logo" width="38px" />
-                            Spotify
-                        </span>
-                        <div id="navbarText">
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active">
-                                    <a href="../homepage.html" class="d-flex align-items-center">
-                                        <i class="bi bi-house-door mr-3"></i>
-                                        <span class="nav-link" href="#">Home <span
-                                                class="sr-only">(current)</span></span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="d-flex align-items-center">
-                                        <i class="bi bi-search mr-3"></i>
-                                        <span class="nav-link" href="#">Search </span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="d-flex align-items-center">
-                                        <i class="bi bi-collection mr-3"></i>
-                                        <span class="nav-link" href="#">Library </span></a>
-                                </li>
-                                <li class="nav-item mt-4">
-                                    <a href="#" class="d-flex align-items-center">
-                                        <i class="bi bi-plus-square mr-3"></i>
-                                        <span class="nav-link" href="#">Create Playlist </span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="d-flex align-items-center">
-                                        <i class="bi bi-bag-heart-fill mr-3"></i>
-                                        <span class="nav-link" href="#">Liked Songs </span></a>
-                                </li>
-                            </ul>
-                            <hr />
-                            <ul class="sidebar-song-list">
-                                <li class="mb-1"><a href="#">Jun19</a></li>
-                                <li class="mb-1"><a href="#">Funky Heavy Bluesy</a></li>
-                                <li class="mb-1"><a href="#">Your Top Songs 2020</a></li>
-                                <li class="mb-1"><a href="#">Funky heavy Bluesy</a></li>
-                                <li class="mb-1"><a href="#">Funky Heavy Bluesy</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                </aside>
-            </div>
-            <div class="col header-part">
-                <div class="row pt-5">
-                    <div class="col-2 album-img pr-0 pb-3">
-                    </div>
-                    <div class="col  ml-3 mb-3 mt-auto">
-                        <div class="row mt-auto">
-                            ALBUM
-                        </div>
-                        <div class="row album-name my-4">
-                        </div>
-                        <div class="row album-info d-flex align-items-center">
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-4 song-list">
-                    <div class="col d-flex align-content-center">
-                        <i class="bi bi-play-circle-fill align-self-center"></i>
-                        <i class="bi bi-heart ml-4 align-self-center"></i>
-                        <i class="bi bi-three-dots ml-4 align-self-center"></i>
-                    </div>
-                </div>
-                <div class="row">
-                    <table class="table table-hover table-borderless mr-5 ml-3">
-                        <thead>
-                            <tr class="header-tr">
-                                <th scope="col" class="align-middle">#</th>
-                                <th scope="col" class="align-middle">TITLE</th>
-                                <th scope="col" class="align-middle"><i class="bi bi-stopwatch stopwatchIcon"></i></th>
-                            </tr>
-                        </thead>
-                        <tbody class="album-music-list">
-                            <tr>
-
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+      <div class="row">
+        <div class="col side-navbar">
+          <aside class="sidebar">
+            <nav class="navbar d-block">
+              <span class="d-flex align-items-center header-logo mb-4">
+                <img
+                  class="mr-2"
+                  src="../Assets/spotify.svg"
+                  alt="spotify logo"
+                  width="38px"
+                />
+                Spotify
+              </span>
+              <div id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a
+                      href="../homepage.html"
+                      class="d-flex align-items-center"
+                    >
+                      <i class="bi bi-house-door mr-3"></i>
+                      <span class="nav-link" href="#"
+                        >Home <span class="sr-only">(current)</span></span
+                      ></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      href="../Search/search.html"
+                      class="d-flex align-items-center"
+                    >
+                      <i class="bi bi-search mr-3"></i>
+                      <span class="nav-link" href="#">Search </span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="d-flex align-items-center">
+                      <i class="bi bi-collection mr-3"></i>
+                      <span class="nav-link" href="#">Library </span></a
+                    >
+                  </li>
+                  <li class="nav-item mt-4">
+                    <a href="#" class="d-flex align-items-center">
+                      <i class="bi bi-plus-square mr-3"></i>
+                      <span class="nav-link" href="#">Create Playlist </span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="d-flex align-items-center">
+                      <i class="bi bi-bag-heart-fill mr-3"></i>
+                      <span class="nav-link" href="#">Liked Songs </span></a
+                    >
+                  </li>
+                </ul>
+                <hr />
+                <ul class="sidebar-song-list">
+                  <li class="mb-1"><a href="#">Jun19</a></li>
+                  <li class="mb-1"><a href="#">Funky Heavy Bluesy</a></li>
+                  <li class="mb-1"><a href="#">Your Top Songs 2020</a></li>
+                  <li class="mb-1"><a href="#">Funky heavy Bluesy</a></li>
+                  <li class="mb-1"><a href="#">Funky Heavy Bluesy</a></li>
+                </ul>
+              </div>
+            </nav>
+          </aside>
         </div>
+        <div class="col header-part">
+          <div class="row pt-5">
+            <div class="col-2 album-img pr-0 pb-3"></div>
+            <div class="col ml-3 mb-3 mt-auto">
+              <div class="row mt-auto">ALBUM</div>
+              <div class="row album-name my-4"></div>
+              <div class="row album-info d-flex align-items-center"></div>
+            </div>
+          </div>
+          <div class="row mt-4 song-list">
+            <div class="col d-flex align-content-center">
+              <i class="bi bi-play-circle-fill align-self-center"></i>
+              <i class="bi bi-heart ml-4 align-self-center"></i>
+              <i class="bi bi-three-dots ml-4 align-self-center"></i>
+            </div>
+          </div>
+          <div class="row">
+            <table class="table table-hover table-borderless mr-5 ml-3">
+              <thead>
+                <tr class="header-tr">
+                  <th scope="col" class="align-middle">#</th>
+                  <th scope="col" class="align-middle">TITLE</th>
+                  <th scope="col" class="align-middle">
+                    <i class="bi bi-stopwatch stopwatchIcon"></i>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="album-music-list">
+                <tr></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="music-player-container">
-        <audio id="audio">
-            <source src="" type="audio/mpeg" preload="metadata">
-        </audio>
-        <div class="music-player">
-            <div class="song-bar">
-                <div class="song-infos">
-                    <div class="image-container">
-                    </div>
-                    <div class="song-description">
-                        <p class="title">
-                        </p>
-                        <p class="artist"></p>
-                    </div>
-                </div>
-                <div class="icons">
-                    <i class="far fa-heart"></i>
-                    <i class="fa-solid fa-compress"></i>
-                </div>
+      <audio id="audio">
+        <source src="" type="audio/mpeg" preload="metadata" />
+      </audio>
+      <div class="music-player">
+        <div class="song-bar">
+          <div class="song-infos">
+            <div class="image-container"></div>
+            <div class="song-description">
+              <p class="title"></p>
+              <p class="artist"></p>
             </div>
-            <div class="progress-controller">
-                <div class="control-buttons">
-                    <i class="fas fa-random"></i>
-                    <i class="fas fa-step-backward"></i>
-                    <i class="play fa-solid fa-circle-play"></i>
-                    <i class="pause fa-solid fa-circle-pause"></i>
-                    <i class="fas fa-step-forward"></i>
-                    <i class="fa-solid fa-repeat"></i>
-                </div>
-                <div class="progress-container">
-                    <span id="current">0:00</span>
-                    <div class="progress-bar">
-                        <div class="progress"></div>
-                    </div>
-                    <span id="length">0:00</span>
-                </div>
-            </div>
-            <div class="other-features">
-                <i class="fas fa-list-ul"></i>
-                <i class="fa-solid fa-computer"></i>
-                <div class="volume-bar">
-                    <i class="fas fa-volume-down"></i>
-                    <div class="progress-bar">
-                        <div class="progress"></div>
-                    </div>
-                </div>
-            </div>
+          </div>
+          <div class="icons">
+            <i class="far fa-heart"></i>
+            <i class="fa-solid fa-compress"></i>
+          </div>
         </div>
+        <div class="progress-controller">
+          <div class="control-buttons">
+            <i class="fas fa-random"></i>
+            <i class="fas fa-step-backward"></i>
+            <i class="play fa-solid fa-circle-play"></i>
+            <i class="pause fa-solid fa-circle-pause"></i>
+            <i class="fas fa-step-forward"></i>
+            <i class="fa-solid fa-repeat"></i>
+          </div>
+          <div class="progress-container">
+            <span id="current">0:00</span>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <span id="length">0:00</span>
+          </div>
+        </div>
+        <div class="other-features">
+          <i class="fas fa-list-ul"></i>
+          <i class="fa-solid fa-computer"></i>
+          <div class="volume-bar">
+            <i class="fas fa-volume-down"></i>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="/player/player.js"></script>
-    <script src="https://kit.fontawesome.com/2393590cb4.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/2393590cb4.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
     <script src="album-page.js"></script>
-</body>
-
+  </body>
 </html>

@@ -152,11 +152,19 @@ function scrollHeader() {
     let scrollPosition = window.scrollY;
     if (scrollPosition >= 1) {
       header.classList.add("header-bg-color");
-      // header.style.backgroundColor = "#000";
     }
     if (scrollPosition < 1) {
       header.classList.remove("header-bg-color");
-      // header.style.backgroundColor = "transparent";
     }
   });
 }
+// let searchSidebar = document.getElementById("search-sidebar");
+
+// function handleSearch() {
+//   let searchBar = document.getElementById("search-bar");
+//   if (searchBar.style.display === "none") {
+//     searchBar.classList.add("d-block");
+//   } else {
+//     searchBar.classList.remove("d-none");
+//   }
+// }

@@ -43,7 +43,12 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="d-flex align-items-center">
+                  <a
+                    href="../Search/search.html"
+                    id="search-sidebar"
+                    class="d-flex align-items-center"
+                    onclick="handleSearch()"
+                  >
                     <i class="bi bi-search mr-3"></i>
                     <span class="nav-link" href="#">Search </span></a
                   >
@@ -83,7 +88,12 @@
             <div class="content-jumbotron d-flex flex-column">
               <img class="artist-big-img" src="" alt="" />
               <div class="d-flex align-items-center content-header mx-0">
-                <button onclick="history.back()" class="arrow-bg mr-2">
+                <button
+                  onclick="history.back()"
+                  class="arrow-bg mr-2"
+                  title="Back"
+                  type="button"
+                >
                   <svg
                     role="img"
                     height="16"
@@ -98,7 +108,7 @@
                     ></path>
                   </svg>
                 </button>
-                <button class="arrow-bg">
+                <button class="arrow-bg" title="Forward" type="button">
                   <svg
                     role="img"
                     height="16"
@@ -151,7 +161,7 @@
               <div
                 class="d-flex flex-column justify-content-end content-heading"
               >
-                <div>
+                <div class="artist-block">
                   <svg
                     role="img"
                     height="24"
