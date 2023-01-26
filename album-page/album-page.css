@@ -73,6 +73,7 @@
 
 tr {
     color: white;
+    cursor: pointer;
 }
 
 
@@ -190,4 +191,9 @@ th:first-of-type {
 
 #songHeart {
     font-size: 1rem;
+}
+
+
+.music-player-container i {
+    font-size: 1.5rem;
 }

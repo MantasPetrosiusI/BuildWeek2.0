@@ -46,7 +46,7 @@ const displayData = async () => {
     await data.tracks.data.map((song) => {
         albumMusicList.innerHTML +=
             `
-        <tr class="track-row">
+        <tr class="track-row" onclick="audioPlayer(${song.album.id})">
             <th scope="row" class="align-middle track-number">${counter}</th>
                 <td>
                     <div class="row m-0">${song.title}</div>
