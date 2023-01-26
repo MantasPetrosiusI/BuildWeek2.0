@@ -27,12 +27,12 @@ const loadArtist = async (query) => {
 
     const songs = await response.json();
     const { data } = songs;
-    console.log(songs);
     const artists = data.slice(0, 8);
     let popularAlbums = document.getElementById("inner");
     // console.log(popularAlbums);
     artists.forEach((song) => {
       popularAlbums.innerHTML += `<div class="col-12 col-sm-12 col-md-4 col-lg-3 mb-4" id="topCards">
+      
                   <a href="./album-page/album-page.html?id=${song.album.id}" class="horizontal-card-block d-flex align-items-center">
                
                     <img
@@ -63,8 +63,7 @@ const loadAlbums = async () => {
       displayAlbums.forEach((album) => {
         popularAlbums.innerHTML += `<div class=" col-12 mb-4 col-sm-4 mb-sm-4 col-md-4 mb-md-4 col-lg-3 mb-lg-4 col-xl-2">
         <div  class="album-card w-100">
-        <a href="./album-page/album-page.html?id=${album.album.id}" class="w-100">
-          <button type="button" title="Play" class="play-green-btn">
+        <button title="Play" class="play-green-btn" onclick="audioPlayer(${album.album.id})">
             <svg
               role="img"
               height="24"
@@ -78,6 +77,8 @@ const loadAlbums = async () => {
               ></path>
             </svg>
           </button>
+        <a href="./album-page/album-page.html?id=${album.album.id}" class="w-100">
+          
           <div class="card">
             <img
               src="${album.album.cover_medium}"
@@ -111,13 +112,11 @@ const loadQueen = async (value) => {
     const songs = await response.json();
     const { data } = songs;
     const displaySongs = data.slice(0, 6);
-    console.log(displaySongs);
     let popularAlbums = document.getElementById("recentlyPlayed");
     displaySongs.forEach((song) => {
       popularAlbums.innerHTML += `<div class=" col-12 mb-4 col-sm-4 mb-sm-4 col-md-4 mb-md-4 col-lg-3 mb-lg-4 col-xl-2">
         <div  class="album-card w-100">
-        <a href="./album-page/album-page.html?id=${song.album.id}" class="w-100">
-          <button type="button" title="Play" class="play-green-btn">
+        <a href=${song.album.id}><button type="button" title="Play" class="play-green-btn">
             <svg
               role="img"
               height="24"
@@ -130,7 +129,10 @@ const loadQueen = async (value) => {
                 d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"
               ></path>
             </svg>
-          </button>
+            
+          </button></a>
+        <a href="./album-page/album-page.html?id=${song.album.id}" class="w-100">
+          
           <div class="card">
             <img
               src="${song.album.cover_medium}"

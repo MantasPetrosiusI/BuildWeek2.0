@@ -13,6 +13,9 @@
   <script src="https://kit.fontawesome.com/2393590cb4.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./Artist Page/artist.css" />
   <link rel="stylesheet" href="./home.css" />
+  <link rel="stylesheet" href="./player/player.css" />
+
+
 
   <title>Spotify</title>
 </head>
@@ -123,7 +126,57 @@
       </div>
     </div>
   </div>
-
+  <div class="music-player-container">
+    <audio id="audio">
+      <source src="" type="audio/mpeg" preload="metadata">
+    </audio>
+    <div class="music-player">
+      <div class="song-bar">
+        <div class="song-infos">
+          <div class="image-container">
+          </div>
+          <div class="song-description">
+            <p class="title">
+            </p>
+            <p class="artist"></p>
+          </div>
+        </div>
+        <div class="icons">
+          <i class="far fa-heart"></i>
+          <i class="fa-solid fa-compress"></i>
+        </div>
+      </div>
+      <div class="progress-controller">
+        <div class="control-buttons">
+          <i class="fas fa-random"></i>
+          <i class="fas fa-step-backward"></i>
+          <i class="play fa-solid fa-circle-play"></i>
+          <i class="pause fa-solid fa-circle-pause"></i>
+          <i class="fas fa-step-forward"></i>
+          <i class="fa-solid fa-repeat"></i>
+        </div>
+        <div class="progress-container">
+          <span id="current">0:00</span>
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
+          <span id="length">0:00</span>
+        </div>
+      </div>
+      <div class="other-features">
+        <i class="fas fa-list-ul"></i>
+        <i class="fa-solid fa-computer"></i>
+        <div class="volume-bar">
+          <i class="fas fa-volume-down"></i>
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/player/player.js"></script>
+  <script src="https://kit.fontawesome.com/2393590cb4.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
