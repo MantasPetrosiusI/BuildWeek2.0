@@ -10,11 +10,13 @@ const options = {
   },
 };
 
+
+
 const audioPlayer = async() =>{
     const res = await fetch(url+"Metallica", options)
     const songs = await res.json();
     console.log(songs)
-
+    // fetch(`https://api.deezer.com/album/${songs.data.album.id}/tracks`)
     //CHANGE EVERYTHING THATS HARDCODED ACCORDINGLY TO OTHER JS FILES TO CORRESPOND TO THEIR FETCH/ onClick e.g songs.data[14]
     let audio = new Audio(`${songs.data[14].preview}`)
     
