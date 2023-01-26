@@ -115,8 +115,7 @@ const loadQueen = async (value) => {
     let popularAlbums = document.getElementById("recentlyPlayed");
     displaySongs.forEach((song) => {
       popularAlbums.innerHTML += `<div class=" col-12 mb-4 col-sm-4 mb-sm-4 col-md-4 mb-md-4 col-lg-3 mb-lg-4 col-xl-2">
-        <div  class="album-card w-100">
-        <a href=${song.album.id}><button type="button" title="Play" class="play-green-btn">
+        <div  class="album-card w-100"><button title="Play" class="play-green-btn" onclick="audioPlayer(${song.album.id})">
             <svg
               role="img"
               height="24"
@@ -130,7 +129,8 @@ const loadQueen = async (value) => {
               ></path>
             </svg>
             
-          </button></a>
+          </button>
+        <a href=${song.album.id}></a>
         <a href="./album-page/album-page.html?id=${song.album.id}" class="w-100">
           
           <div class="card">
