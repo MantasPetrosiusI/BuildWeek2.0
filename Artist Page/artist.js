@@ -11,11 +11,13 @@ window.onload = async () => {
   await fetchTrack(id);
   await scrollHeader();
 };
-if (localStorage.getItem("username") === null) {
-  accountPill.innerText = "User";
+if (sessionStorage.getItem('username') === null) {
+  window.location.replace("../login-page/login-page.html")
 } else {
-  accountPill.innerText = localStorage.getItem("username");
+  accountPill.innerText = sessionStorage.getItem("username");
 }
+
+
 
 const getArtist = async (id) => {
   try {
@@ -38,6 +40,7 @@ const getArtist = async (id) => {
       "innerText",
       `${artistArray.nb_fan} monthly listeners`
     );
+    
   } catch (err) {
     console.error(err);
   }
@@ -69,7 +72,7 @@ const renderFetchedSongs = async (trackDataArray) => {
     //   console.log("track", track);
     track.forEach((singleSong, index) => {
       playerTrackBlock.innerHTML += `<div class="player-track-list">
-      <div class="row align-items-center">
+      <div class="row align-items-center" onclick = "audioPlayer(${singleSong.album.id})">
         <div class="col-6">
           <div class="d-flex align-items-center">
             <span class="track-num">${index + 1}</span>
@@ -164,6 +167,10 @@ function scrollHeader() {
     }
   });
 }
+const logoutBtn = document.querySelector('#logout')
+logoutBtn.addEventListener('click', () =>{
+  sessionStorage.removeItem('username')
+})
 // let searchSidebar = document.getElementById("search-sidebar");
 
 // function handleSearch() {

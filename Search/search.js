@@ -2,6 +2,7 @@ let searchUrl = "https://striveschool-api.herokuapp.com/api/deezer/search?q=";
 
 let searchRow = document.getElementById("search-row");
 let searchArtistRow = document.getElementById("search-artist-row");
+let accountPill = document.querySelector('#account-pill')
 let albumArtistData = [];
 let albumData = [];
 let allData = [];
@@ -15,6 +16,12 @@ const options = {
       "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2M5M2FjZGU3MzczODAwMTUzNzQzOGIiLCJpYXQiOjE2NzQ1NTYzNjgsImV4cCI6MTY3NTc2NTk2OH0.oOhKfDMa6Rrq8nZX2NU7dxrUGXvr2aQdXLOkGapH9UE",
   }),
 };
+if (sessionStorage.getItem('username') === null) {
+  window.location.replace("./login-page/login-page.html")
+} else {
+  accountPill.innerText = sessionStorage.getItem("username");
+}
+
 window.onload = async () => {
   await loadFetchAlbum("Metallica");
   await scrollHeader();
@@ -100,11 +107,7 @@ function displayAlbums(albums) {
               class="col-12 mb-4 col-sm-4 mb-sm-4 col-md-4 mb-md-4 col-lg-3 mb-lg-4 col-xl-2"
             >
               <div class="album-card w-100">
-                <a
-                   href="../album-page/album-page.html?id=${singleItem.album.id}"
-                  class="w-100"
-                >
-                  <button type="button" title="Play" class="play-green-btn">
+              <button title="Play" class="play-green-btn" onclick="audioPlayer(${singleItem.album.id})">
                     <svg
                       role="img"
                       height="24"
@@ -118,6 +121,11 @@ function displayAlbums(albums) {
                       ></path>
                     </svg>
                   </button>
+                <a
+                   href="../album-page/album-page.html?id=${singleItem.album.id}"
+                  class="w-100"
+                >
+                  
                   <div class="card">
                     <img
                       src="${singleItem.album.cover_medium}"
@@ -158,7 +166,7 @@ const handleSearchQuery = (e) => {
   }
   if (e.length > 2) {
     searchRow.innerHTML = "";
-    filteredItems = albumData.filter((item) => {
+    filteredItem = albumData.filter((item) => {
       return item.album.title.toLowerCase().includes(e.toLowerCase());
     });
 
@@ -182,3 +190,7 @@ function scrollHeader() {
     }
   });
 }
+const logoutBtn = document.querySelector('#logout');
+logoutBtn.addEventListener('click', () =>{
+  sessionStorage.removeItem('username')
+})

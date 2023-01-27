@@ -21,10 +21,10 @@ window.onload = async () => {
   await fetchData();
   await scrollHeader();
 };
-if (localStorage.getItem("username") === null) {
-  accountPill.innerText = "User";
+if (sessionStorage.getItem('username') === null) {
+  window.location.replace("../login-page/login-page.html")
 } else {
-  accountPill.innerText = localStorage.getItem("username");
+  accountPill.innerText = sessionStorage.getItem("username");
 }
 
 const fetchData = async () => {
@@ -137,3 +137,8 @@ function scrollHeader() {
     }
   });
 }
+const logoutBtn = document.querySelector('#logout');
+
+logoutBtn.addEventListener('click', () =>{
+  sessionStorage.removeItem('username')
+})

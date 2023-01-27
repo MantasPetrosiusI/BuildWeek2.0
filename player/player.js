@@ -31,13 +31,14 @@ const audioPlayer = async (albumId) => {
     const unmute = document.querySelector('.fas.fa-volume-down')
     const mute = document.querySelector('.fa-solid.fa-volume-xmark')
 
-    audio = document.querySelector('audio')
-    
+    let audio = document.querySelector('audio')
+
     audio.src =  `${songs.data[i].preview}`;
     audio.volume = 0.5;
     audio.play();
-    play.style.display = "none";
-    pause.style.display = "block";
+    audio.pause();
+    play.style.display = "block";
+    pause.style.display = "none";
     
     //SHUFFLE
     shuffle.addEventListener('click', () => {
@@ -164,4 +165,3 @@ function setVol(el){
     console.log(newVal)
     aud.volume = el.value/100;
     }
-audioPlayer("915785");
