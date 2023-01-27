@@ -75,8 +75,8 @@ input {
 }
 
 .bottom-text {
-    width: 500px;
-    font-size: 0.75rem;
+    width: 400px;
+    font-size: 0.58rem;
 }
 
 .color-green {
@@ -89,4 +89,8 @@ input {
 
 .dont-wrap {
     white-space: nowrap;
+}
+
+#username {
+    width: 100%;
 }
