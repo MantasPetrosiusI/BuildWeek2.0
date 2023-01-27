@@ -39,6 +39,7 @@
 
 .apple {
     background-color: black;
+    font-size: 1rem;
 }
 
 .mx-3 {
@@ -70,8 +71,10 @@ input {
 .sign-up {
     width: 400px;
     border-radius: 20px;
-    border: 2px solid black;
+    border: 1px solid rgb(135 135 135);
     font-size: 0.9rem;
+    color: rgb(109, 109, 109);
+    font-weight: 600;
 }
 
 .bottom-text {
@@ -93,4 +96,10 @@ input {
 
 #username {
     width: 100%;
+}
+
+.google-logo {
+    height: 16px;
+    margin-top: 3px;
+
 }
