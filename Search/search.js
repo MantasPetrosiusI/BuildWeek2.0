@@ -2,7 +2,7 @@ let searchUrl = "https://striveschool-api.herokuapp.com/api/deezer/search?q=";
 
 let searchRow = document.getElementById("search-row");
 let searchArtistRow = document.getElementById("search-artist-row");
-let accountPill = document.querySelector('#account-pill')
+let accountPill = document.querySelector("#account-pill");
 let albumArtistData = [];
 let albumData = [];
 let allData = [];
@@ -16,8 +16,8 @@ const options = {
       "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2M5M2FjZGU3MzczODAwMTUzNzQzOGIiLCJpYXQiOjE2NzQ1NTYzNjgsImV4cCI6MTY3NTc2NTk2OH0.oOhKfDMa6Rrq8nZX2NU7dxrUGXvr2aQdXLOkGapH9UE",
   }),
 };
-if (sessionStorage.getItem('username') === null) {
-  window.location.replace("./login-page/login-page.html")
+if (sessionStorage.getItem("username") === null) {
+  window.location.replace("./login-page/login-page.html");
 } else {
   accountPill.innerText = sessionStorage.getItem("username");
 }
@@ -152,7 +152,7 @@ function displayAlbums(albums) {
 const handleSearchQuery = (e) => {
   let deleteText = document.getElementById("delete-text");
   let searchInput = document.querySelector(".search-input");
-  console.log(albumData);
+  // console.log(albumData);
   if (e) {
     deleteText.classList.remove("d-none");
     deleteText.classList.add("d-block");
@@ -172,7 +172,7 @@ const handleSearchQuery = (e) => {
 
     let albumTitle = document.getElementById("album-title");
     albumTitle.textContent = "Searched Album";
-    displayAlbums(filteredItems);
+    displayAlbums(filteredItem);
   } else {
     displayAlbums(albumData);
   }
@@ -190,7 +190,7 @@ function scrollHeader() {
     }
   });
 }
-const logoutBtn = document.querySelector('#logout');
-logoutBtn.addEventListener('click', () =>{
-  sessionStorage.removeItem('username')
-})
+const logoutBtn = document.querySelector("#logout");
+logoutBtn.addEventListener("click", () => {
+  sessionStorage.removeItem("username");
+});
