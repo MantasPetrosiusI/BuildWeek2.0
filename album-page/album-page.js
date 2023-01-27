@@ -1,3 +1,4 @@
+const accountPill = document.getElementById("account-pill");
 const options = {
   method: "GET",
   headers: {
@@ -18,7 +19,13 @@ const albumMusicList = document.getElementsByClassName("album-music-list")[0];
 
 window.onload = async () => {
   await fetchData();
+  await scrollHeader();
 };
+if (sessionStorage.getItem('username') === null) {
+  window.location.replace("../login-page/login-page.html")
+} else {
+  accountPill.innerText = sessionStorage.getItem("username");
+}
 
 const fetchData = async () => {
   try {
@@ -116,3 +123,22 @@ const convertSec = (sec, song = false) => {
     return `${minutes} min ${seconds} sec`;
   }
 };
+let header = document.querySelector(".content-header");
+function scrollHeader() {
+  document.addEventListener("scroll", () => {
+    let scrollPosition = window.scrollY;
+    if (scrollPosition >= 1) {
+      header.classList.add("header-bg-color");
+      // header.style.backgroundColor = "#000";
+    }
+    if (scrollPosition < 1) {
+      header.classList.remove("header-bg-color");
+      // header.style.backgroundColor = "transparent";
+    }
+  });
+}
+const logoutBtn = document.querySelector('#logout');
+
+logoutBtn.addEventListener('click', () =>{
+  sessionStorage.removeItem('username')
+})

@@ -12,14 +12,11 @@ const options = {
   },
 };
 
-if (localStorage.getItem('username') === null) {
-  accountPill.innerText = 'User'
+if (sessionStorage.getItem('username') === null) {
+  window.location.replace("./login-page/login-page.html")
+} else {
+  accountPill.innerText = sessionStorage.getItem("username");
 }
-else {
-  accountPill.innerText = localStorage.getItem('username');
-}
-
-
 
 const loadArtist = async (query) => {
   try {
@@ -187,3 +184,10 @@ function next() {
 function previous() {
   window.history.back();
 }
+
+const logoutBtn = document.querySelector('#logout')
+logoutBtn.addEventListener('click', () =>{
+  sessionStorage.removeItem('username')
+})
+
+audioPlayer("915785");

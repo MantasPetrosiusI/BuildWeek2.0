@@ -1,3 +1,4 @@
+const accountPill = document.getElementById("account-pill");
 const url = "https://striveschool-api.herokuapp.com/api/deezer/artist/";
 const params = new URLSearchParams(location.search);
 console.log(params);
@@ -10,6 +11,13 @@ window.onload = async () => {
   await fetchTrack(id);
   await scrollHeader();
 };
+if (sessionStorage.getItem('username') === null) {
+  window.location.replace("../login-page/login-page.html")
+} else {
+  accountPill.innerText = sessionStorage.getItem("username");
+}
+
+
 
 const getArtist = async (id) => {
   try {
@@ -26,12 +34,13 @@ const getArtist = async (id) => {
     const artistArray = await response.json();
     console.log("artistArray", artistArray);
     changeElement(".artist-big-img", "src", artistArray.picture_xl);
-    changeElement("h1", "innerText", artistArray.name);
+    changeElement("h2", "innerText", artistArray.name);
     changeElement(
       ".fan",
       "innerText",
       `${artistArray.nb_fan} monthly listeners`
     );
+    
   } catch (err) {
     console.error(err);
   }
@@ -63,7 +72,7 @@ const renderFetchedSongs = async (trackDataArray) => {
     //   console.log("track", track);
     track.forEach((singleSong, index) => {
       playerTrackBlock.innerHTML += `<div class="player-track-list">
-      <div class="row align-items-center">
+      <div class="row align-items-center" onclick = "audioPlayer(${singleSong.album.id})">
         <div class="col-6">
           <div class="d-flex align-items-center">
             <span class="track-num">${index + 1}</span>
@@ -158,6 +167,10 @@ function scrollHeader() {
     }
   });
 }
+const logoutBtn = document.querySelector('#logout')
+logoutBtn.addEventListener('click', () =>{
+  sessionStorage.removeItem('username')
+})
 // let searchSidebar = document.getElementById("search-sidebar");
 
 // function handleSearch() {
