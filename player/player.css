@@ -26,6 +26,7 @@ body {
     height: 7rem;
     padding: var(--padding);
     color: var(--primary-color);
+    border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 .music-player-container i {
@@ -186,9 +187,10 @@ i:hover {
 }
 
 .music-player-container {
-    position: sticky;
+    position: fixed;
     bottom: 0;
     z-index: 5;
+    width: 100%;
 
 }
 

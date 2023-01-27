@@ -88,12 +88,7 @@
             <div class="content-jumbotron d-flex flex-column">
               <img class="artist-big-img" src="" alt="" />
               <div class="d-flex align-items-center content-header mx-0">
-                <button
-                  onclick="history.back()"
-                  class="arrow-bg mr-2"
-                  title="Back"
-                  type="button"
-                >
+                <button onclick="history.back()" class="arrow-bg mr-2">
                   <svg
                     role="img"
                     height="16"
@@ -108,7 +103,7 @@
                     ></path>
                   </svg>
                 </button>
-                <button class="arrow-bg" title="Forward" type="button">
+                <button id="previous" class="arrow-bg">
                   <svg
                     role="img"
                     height="16"
@@ -144,14 +139,13 @@
                     </svg>
                   </div>
                   <button
+                    id="account-pill"
                     class="btn my-0 dropdown-toggle text-white d-flex align-items-center"
                     type="button"
                     data-toggle="dropdown"
                     aria-expanded="false"
-                  >
-                    Harkunj
-                  </button>
-                  <div class="dropdown-menu">
+                  ></button>
+                  <div class="dropdown-menu dropdown-menu-right">
                     <a class="dropdown-item" href="#">Action</a>
                     <a class="dropdown-item" href="#">Another action</a>
                     <a class="dropdown-item" href="#">Something else here</a>
@@ -178,8 +172,8 @@
                   </svg>
                   <span>Verified Artist</span>
                 </div>
-                <h2>Arijit Singh</h2>
-                <span class="fan">28,472,779</span>
+                <h2>Arijit singh</h2>
+                <span class="fan">21,283,236</span>
               </div>
             </div>
           </div>

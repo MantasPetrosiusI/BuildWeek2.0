@@ -1,3 +1,4 @@
+const accountPill = document.getElementById("account-pill");
 const url = "https://striveschool-api.herokuapp.com/api/deezer/artist/";
 const params = new URLSearchParams(location.search);
 console.log(params);
@@ -10,6 +11,11 @@ window.onload = async () => {
   await fetchTrack(id);
   await scrollHeader();
 };
+if (localStorage.getItem("username") === null) {
+  accountPill.innerText = "User";
+} else {
+  accountPill.innerText = localStorage.getItem("username");
+}
 
 const getArtist = async (id) => {
   try {
@@ -26,7 +32,7 @@ const getArtist = async (id) => {
     const artistArray = await response.json();
     console.log("artistArray", artistArray);
     changeElement(".artist-big-img", "src", artistArray.picture_xl);
-    changeElement("h1", "innerText", artistArray.name);
+    changeElement("h2", "innerText", artistArray.name);
     changeElement(
       ".fan",
       "innerText",

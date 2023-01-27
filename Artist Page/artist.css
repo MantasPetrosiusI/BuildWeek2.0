@@ -65,7 +65,7 @@ a:hover {
   border-width: 0;
 }
 .sidebar {
-  flex: 0 0 15%;
+  flex: 0 0 18%;
   height: 100vh;
   background-color: #000000;
   position: sticky;
@@ -108,7 +108,7 @@ a:hover {
 }
 
 .main-content {
-  flex: 0 0 85%;
+  flex: 0 0 82%;
   position: relative;
 }
 
