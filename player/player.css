@@ -180,13 +180,20 @@ i:hover {
 .pause.fa-solid.fa-circle-pause {
     display: none;
 }
-.fa-solid.fa-volume-xmark{
-    display:none;
+
+.fa-solid.fa-volume-xmark {
+    display: none;
 }
+
 .music-player-container {
     position: sticky;
     bottom: 0;
     z-index: 5;
 
 }
+
+.music-player-container i {
+    font-size: 1.5rem;
+}
+
 /* Make volume bar based on %
